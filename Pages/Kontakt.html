@@ -2,14 +2,34 @@
 <html lang="sv">
     <head>
         <meta charset="utf-8">
-        <title>Kontakt, Johan Stening</title>
+        <title>Kontakt</title>
     </head>
     <body>
         <h1>Kontakt</h1>
         <ul>
-            <li><a href = "Presentation.html" >Startsida</a></li>
+            <li><a href = "Presentation.html" >Presentation</a></li>
             <li><a href = "Laborationer.html" >Laborationer</a></li>
             <li><a href = "../Index.html" >Index</a></li>
         </ul>
+        <form action="http://webproduction.standout.se/form.php" method="post">
+            <fieldset><legend>Info om dig</legend>
+                    <label>Skriv ditt namn: <input type="text"/></label><br>
+                    Har du ett husdjur?
+                    <select name="Husdjur">
+                        <option value="Ja">Ja</option>
+                        <option value="Nej">Nej</option>
+                        <option value="Vet_ej">Vet ej</option>
+                    </select><br>
+            </fieldset>
+            <fieldset>
+                    <legend>Kan du denna?</legend>
+                    Vilken är Sveriges huvudstad?<br>
+                    <input type="radio" name="stad" id="G"><label for="G">Göteborg</label><br>
+                    <input type="radio" name="stad" id="S" checked><label for="S">Stockholm</label><br>
+                    <input type="radio" name="stad" id="K"><label for="K">Kalmar</label><br>
+                    <input type="radio" name="stad" id="L"><label for="L">Luleå</label>
+            </fieldset>
+            <p><input type="submit" value="Skicka"/></p>
+        </form>
     </body>
 </html>
