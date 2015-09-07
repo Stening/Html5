@@ -52,10 +52,15 @@ table {
 #container{
 	margin:auto;
 	width:1200px;
-	height:920px;
 	overflow:auto;
 	font-size:16px;
+
 }
+td, th {
+		text-align:left;
+		border: 1px solid black;
+}
+
 #container h1{
 padding:10px;
 }
@@ -74,12 +79,21 @@ padding:10px;
 	font-size: 100%;
 	text-align:center;
 }
-#navigation li{
 
+#content{
+	text-align:left;
+	clear:none;
+	display:block;
+	border: 1px solid black;
+	line-height: 1.5em;
+	
 }
 #content h1{
 	text-align:left;
+	clear:none;
+	display:block;
 }
+
 #aboutme{
 	border: 1px solid black;
 	clear:none;
