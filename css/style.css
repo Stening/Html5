@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #8B837D;
 }
 ol, ul {
 	list-style: none;
@@ -47,78 +48,135 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 /* End of "Css reset" */
+
+
+
 #container{
+	background-color: #A6B2BE;
 	margin:auto;
 	width:1200px;
 	overflow:auto;
 	font-size:16px;
-
-}
-td, th {
-		text-align:left;
-		border: 1px solid black;
+	border:1px solid black;
 }
 
 #container h1{
-padding:10px;
+	padding:10px;
+}
+#header{
+
 }
 #header>h1{
 	border: 1px solid black;
 	font-size: 100%;
 	text-align:center;
+	background-color: #BF8B9C;
+	margin:0px 0px 10px 0px;
+}
+
+
+/*images*/
+#dummies {float: left; padding: 10px 10px 0px 10px;}/*presentation.html*/
+
+#badge {padding: 10px 10px 0px 10px;}/*index.html*/
+
+#testpic {padding: 10px 10px 0px 10px;}/*laborationer.html*/
+/*images*/
+
+
+/*meny*/
+#navigation{
+	margin:0px 0px 10px 0px;
+	text-align:center;
+	font-size:100%;
 	
 }
-#dummies{
-	float: left;
+#navigation ul{
+	border: 0px solid black;
+	display:inline-block;
+}
+#navigation li{
+	display:inline-block;
 }
 
-#navigation{
-	border: 1px solid black;
-	font-size: 100%;
-	text-align:center;
+#navigation>ul>li a{
+	padding: 0px 50px 0px 50px;
+	border:1px solid black;
+	text-decoration:none;
+	color:#000000;
+	background-color:#BF8B76;
 }
+#navigation a:hover:not(.active){
+	background-color:#F7B499;
+}
+#navigation .active{
+	color:#000000;
+	background-color:#85766E;
+}
+/*meny*/
 
+
+
+/*content*/
 #content{
 	text-align:left;
 	clear:none;
 	display:block;
-	border: 1px solid black;
+	border: 1px 1px 1px 1px solid black;
 	line-height: 1.5em;
-	
 }
 #content h1{
 	text-align:left;
 	clear:none;
 	display:block;
 }
+#content p li, h2 , dd, dt{
+	padding-left:5px;
+}
+#content table{
+	margin: 0px 0px 0px 10px;
+}
+#content td, th, tfoot{
+		text-align:center;
+		border-width: 1px;
+		border:1px solid black;
+		padding:3px;
+}
+/*content*/
 
+
+
+/*text*/
 #aboutme{
 	border: 1px solid black;
 	clear:none;
 	display:block;
-	
-
 }
 
 #infoschool{
 	border: 1px solid black;
+	padding: 0px 0px 0px 5px;
 clear:left;
 
 }
 
 #str_weak{
-	border:1px solid black;
+	border: 1px solid black;
 
 }
 #priorities{
-	border:1px solid black;
-
+	border: 1px solid black;
+	padding: 0px 0px 0px 5px;
 }
+/*text*/
+
+
 
 #footer{
-	border:1px solid black;
+	border: 1px solid black;
 	text-align:center;
 	clear:none;
+	padding:10px;
+	background-color:#EDEFF1;
 }
