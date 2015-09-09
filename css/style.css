@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 16px;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -59,20 +59,30 @@ table {
 	overflow:auto;
 	font-size:16px;
 	border:1px solid black;
+	line-height:16px;
 }
 
-#container h1{
-	padding:10px;
+@font-face{
+	font-family:playfair;
+	src:url('fonts/playfairbold.ttf') format('truetype');
 }
-#header{
+@font-face{
+	font-family:merriweather;
+	src:url('fonts/merriweather.ttf') format('truetype');
+}
+@font-face{
+	font-family:lora;
+	src:url('fonts/lora.ttf') format('truetype');
+}
 
-}
 #header>h1{
-	border: 1px solid black;
-	font-size: 100%;
+	border-bottom:1px solid black;
 	text-align:center;
 	background-color: #BF8B9C;
+	padding:10px;
 	margin:0px 0px 10px 0px;
+	font-family: 'playfair', serif;
+	font-size:200%;
 }
 
 
@@ -90,6 +100,7 @@ table {
 	margin:0px 0px 10px 0px;
 	text-align:center;
 	font-size:100%;
+	font-family: 'Merriweather', serif;
 	
 }
 #navigation ul{
@@ -123,17 +134,47 @@ table {
 	text-align:left;
 	clear:none;
 	display:block;
-	border: 1px 1px 1px 1px solid black;
-	line-height: 1.5em;
+	line-height: 150%;
+	word-wrap: normal;
+	font-family:'lora';
 }
+#content p{
+	width:80%;
+}
+
 #content h1{
-	text-align:left;
-	clear:none;
+	font-size:150%;
+	padding:10px;
+	padding-top:30px;
+	font-weight:bold;
 	display:block;
+	clear:none;
+	text-align:left;
 }
-#content p li, h2 , dd, dt{
+#content h2{
+	font-size:140%;
+	padding:10px;
+	padding-top:20px;
+	font-weight:bold;
+}
+
+#content p, li, h2 , dd, dt{
 	padding-left:5px;
 }
+#content dt{
+	font-weight:bold;
+}
+#content dd{
+	padding-left:20px;
+}
+#content legend{
+	padding:20px;
+	font-weight:bold;
+	font-size:120%;
+}
+
+
+
 #content table{
 	margin: 0px 0px 0px 10px;
 }
@@ -149,24 +190,20 @@ table {
 
 /*text*/
 #aboutme{
-	border: 1px solid black;
 	clear:none;
 	display:block;
 }
 
 #infoschool{
-	border: 1px solid black;
 	padding: 0px 0px 0px 5px;
 clear:left;
 
 }
 
 #str_weak{
-	border: 1px solid black;
 
 }
 #priorities{
-	border: 1px solid black;
 	padding: 0px 0px 0px 5px;
 }
 /*text*/
