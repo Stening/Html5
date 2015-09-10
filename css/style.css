@@ -31,7 +31,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: #8B837D;
 }
 ol, ul {
 	list-style: none;
@@ -50,15 +49,19 @@ table {
 }
 /* End of "Css reset" */
 
-
-
+/*body*/
+body{
+	background: #BEB0A8;
+	width:auto;
+}
+/*body*/
+/*container/fonts*/
 #container{
-	background-color: #A6B2BE;
+	background-color: none;
 	margin:auto;
 	width:1200px;
 	overflow:auto;
 	font-size:16px;
-	border:1px solid black;
 	line-height:16px;
 }
 
@@ -74,16 +77,28 @@ table {
 	font-family:lora;
 	src:url('fonts/lora.ttf') format('truetype');
 }
+/*container/fonts*/
 
+
+
+
+/*header*/
+#header{
+	margin-top:20px;
+}
 #header>h1{
-	border-bottom:1px solid black;
+	border:1px solid black;
 	text-align:center;
 	padding:10px;
 	margin:0px 0px 10px 0px;
 	font-family: 'playfair', serif;
 	font-size:200%;
-	background: #BF8B9C url(../pics/jslogoblueyellow.svg) no-repeat;
+	background: #BF8B9C url(pics/jslogoblueyellow.svg) no-repeat;
+	box-shadow: 2px 2px 2px black;
 }
+/*header*/
+
+
 
 
 /*images*/
@@ -93,6 +108,18 @@ table {
 
 #testpic {padding: 10px 10px 0px 10px;}/*laborationer.html*/
 /*images*/
+
+
+
+
+/*videos*/
+#myvid{
+	padding: 10px;
+}
+/*videos*/
+
+
+
 
 /*meny*/
 #navigation{
@@ -107,8 +134,8 @@ table {
 }
 #navigation li{
 	display:inline-block;
+	box-shadow: 2px 2px 2px black;
 }
-
 #navigation>ul>li a{
 	padding: 0px 50px 0px 50px;
 	border:1px solid black;
@@ -127,8 +154,13 @@ table {
 
 
 
+
+
 /*content*/
 #content{
+	box-shadow: 2px 2px 2px black;
+	border:1px solid black;
+	background-color: #A6B2BE;
 	text-align:left;
 	clear:none;
 	display:block;
@@ -139,6 +171,20 @@ table {
 #content p{
 	width:80%;
 }
+#content a{
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration:none;
+	color: black;
+	border: 1px solid black;
+	background-color:#BF8B76;
+}
+#labbstatus{
+	padding: 10px;
+}
+#content a:hover{
+	background-color:#F7B499;
+}
 #content h1{
 	font-size:150%;
 	padding:10px;
@@ -148,13 +194,11 @@ table {
 	display:block;
 	clear:none;
 	text-align:left;
-}
-
-#content h1:not(::first-of-type){
-	background:url(../pics/bluearrow.svg) no-repeat;
-	background-position: 0px 30px;
+	background:url(pics/bluearrow.svg) no-repeat;
+	background-position: 5px 30px;
 	background-size:50px;
 }
+
 
 
 #content h2{
@@ -164,8 +208,12 @@ table {
 	font-weight:bold;
 }
 
-#content p, li, h2 , dd, dt, label, select{
+#content p, h2 , label, select{
 	padding-left:5px;
+}
+#content li, dd, dt{
+	padding-left:5px;
+	margin:10px;
 }
 #content dt{
 	font-weight:bold;
@@ -193,8 +241,7 @@ table {
 /*content*/
 
 
-
-/*text*/
+/*content/specials*/
 #aboutme{
 	clear:none;
 	display:block;
@@ -209,15 +256,22 @@ clear:left;
 #priorities{
 	padding: 0px 0px 0px 5px;
 }
-/*text*/
+/*content/specials*/
+
+
 
 
 /*footer*/
 #footer{
+	margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    margin-bottom:20px;
 	border: 1px solid black;
 	text-align:center;
 	clear:none;
 	padding:10px;
 	background-color:#EDEFF1;
+	box-shadow: 2px 2px 2px black;
 }
 /*footer*/
