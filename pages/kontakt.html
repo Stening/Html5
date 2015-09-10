@@ -27,10 +27,10 @@
                         <fieldset>
                             <legend>Info om dig</legend>
                             <label>Skriv ditt namn:
-                                <input type="text" />
+                                <input type="text" name="errand"/>
                             </label>
                             <p> Har du ett husdjur?</p>
-                            <select name="Husdjur">
+                            <select name="title">
                                 <option value="Ja">Ja</option>
                                 <option value="Nej">Nej</option>
                                 <option value="Vet_ej">Vet ej</option>
@@ -41,17 +41,20 @@
                         <fieldset>
                             <legend>Kan du denna?</legend>
                             <p>Vilken är Sveriges huvudstad?</p>
-                            <input type="radio" name="stad" id="G">
+                            <p>
+                            <input type="radio" name="question" id="G">
                             <label for="G">Göteborg</label>
-                            <br>
-                            <input type="radio" name="stad" id="S" checked>
+                            </p>
+                            <p><input type="radio" name="question" id="S" checked>
                             <label for="S">Stockholm</label>
-                            <br>
-                            <input type="radio" name="stad" id="K">
+                            </p>
+                            <p>
+                            <input type="radio" name="question" id="K">
                             <label for="K">Kalmar</label>
-                            <br>
-                            <input type="radio" name="stad" id="L">
+                            <p>
+                            <input type="radio" name="question" id="L">
                             <label for="L">Luleå</label>
+                            </p>
                         </fieldset>
                     </div>
                     <p>

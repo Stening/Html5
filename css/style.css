@@ -55,9 +55,12 @@ body{
 	width:auto;
 }
 /*body*/
+
+
+
 /*container/fonts*/
 #container{
-	background-color: none;
+	background-color: transparent;
 	margin:auto;
 	width:1200px;
 	overflow:auto;
