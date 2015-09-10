@@ -78,11 +78,11 @@ table {
 #header>h1{
 	border-bottom:1px solid black;
 	text-align:center;
-	background-color: #BF8B9C;
 	padding:10px;
 	margin:0px 0px 10px 0px;
 	font-family: 'playfair', serif;
 	font-size:200%;
+	background: #BF8B9C url(../pics/jslogoblueyellow.svg) no-repeat;
 }
 
 
@@ -94,14 +94,12 @@ table {
 #testpic {padding: 10px 10px 0px 10px;}/*laborationer.html*/
 /*images*/
 
-
 /*meny*/
 #navigation{
 	margin:0px 0px 10px 0px;
 	text-align:center;
 	font-size:100%;
 	font-family: 'Merriweather', serif;
-	
 }
 #navigation ul{
 	border: 0px solid black;
@@ -141,16 +139,24 @@ table {
 #content p{
 	width:80%;
 }
-
 #content h1{
 	font-size:150%;
 	padding:10px;
 	padding-top:30px;
+	padding-left:40px;
 	font-weight:bold;
 	display:block;
 	clear:none;
 	text-align:left;
 }
+
+#content h1:not(::first-of-type){
+	background:url(../pics/bluearrow.svg) no-repeat;
+	background-position: 0px 30px;
+	background-size:50px;
+}
+
+
 #content h2{
 	font-size:140%;
 	padding:10px;
@@ -158,7 +164,7 @@ table {
 	font-weight:bold;
 }
 
-#content p, li, h2 , dd, dt{
+#content p, li, h2 , dd, dt, label, select{
 	padding-left:5px;
 }
 #content dt{
@@ -172,9 +178,9 @@ table {
 	font-weight:bold;
 	font-size:120%;
 }
-
-
-
+#content select{
+	margin-left: 5px;
+}
 #content table{
 	margin: 0px 0px 0px 10px;
 }
@@ -197,11 +203,8 @@ table {
 #infoschool{
 	padding: 0px 0px 0px 5px;
 clear:left;
-
 }
-
 #str_weak{
-
 }
 #priorities{
 	padding: 0px 0px 0px 5px;
@@ -209,7 +212,7 @@ clear:left;
 /*text*/
 
 
-
+/*footer*/
 #footer{
 	border: 1px solid black;
 	text-align:center;
@@ -217,3 +220,4 @@ clear:left;
 	padding:10px;
 	background-color:#EDEFF1;
 }
+/*footer*/
