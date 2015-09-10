@@ -27,7 +27,7 @@
                         <fieldset>
                             <legend>Info om dig</legend>
                             <label>Skriv ditt namn:
-                                <input type="text" name="errand"/>
+                                <input type="text" name="errand" />
                             </label>
                             <p> Har du ett husdjur?</p>
                             <select name="title">
@@ -42,18 +42,29 @@
                             <legend>Kan du denna?</legend>
                             <p>Vilken är Sveriges huvudstad?</p>
                             <p>
-                            <input type="radio" name="question" id="G">
-                            <label for="G">Göteborg</label>
-                            </p>
-                            <p><input type="radio" name="question" id="S" checked>
-                            <label for="S">Stockholm</label>
+                                <input type="radio" name="question" id="G">
+                                <label for="G">Göteborg</label>
                             </p>
                             <p>
-                            <input type="radio" name="question" id="K">
-                            <label for="K">Kalmar</label>
+                                <input type="radio" name="question" id="S" checked>
+                                <label for="S">Stockholm</label>
+                            </p>
                             <p>
-                            <input type="radio" name="question" id="L">
-                            <label for="L">Luleå</label>
+                                <input type="radio" name="question" id="K">
+                                <label for="K">Kalmar</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="question" id="L">
+                                <label for="L">Luleå</label>
+                            </p>
+                            <legend>Telefon eller mail?</legend>
+                            <p>
+                                <input type="checkbox" name="contact[]" id="mail" value="email">
+                                <label for="mail">mail</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="contact[]" id="telefon" value="number">
+                                <label for="telefon">telefon</label>
                             </p>
                         </fieldset>
                     </div>
