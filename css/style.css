@@ -111,6 +111,28 @@ body{
 
 #testpic {padding: 10px 10px 0px 10px;}/*laborationer.html*/
 
+#spritestart {
+	background-image:url(../pics/sprite.png);
+	width:24px;
+	height:24px;
+	background-position:0px -49px;
+}
+#spritestart:hover{
+	background-position:0px 0px;
+}
+
+.sprites>span{
+	display:none;
+}
+.sprites{
+	padding:0px;
+
+	display:inline;
+	background-image:url(../pics/sprite.png);
+	background-position:0px 0px;
+	
+}
+
 .right{
 	width:300px;
 	height:250px;
@@ -142,18 +164,18 @@ body{
 	border: 0px solid black;
 	display:inline-block;
 }
-#navigation li{
-	display:inline-block;
+#navigation li a{
+	margin-left:50px;
+	display:inline;
 	box-shadow: 2px 2px 2px black;
-}
-#navigation>ul>li a{
 	padding: 0px 50px 0px 50px;
 	border:1px solid black;
 	text-decoration:none;
 	color:#000000;
 	background-color:#BF8B76;
 }
-#navigation a:hover:not(.active){
+
+#navigation li a:hover:not(.active){
 	background-color:#F7B499;
 }
 #navigation .active{
@@ -248,6 +270,7 @@ body{
 		border-width: 1px;
 		border:1px solid black;
 		padding:3px;
+		vertical-align: middle;
 }
 /*content*/
 
