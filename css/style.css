@@ -105,11 +105,21 @@ body{
 
 
 /*images*/
-#dummies {float: left; padding: 10px 10px 0px 10px;}/*presentation.html*/
+#dummies {
+    float: left;
+    padding: 10px 10px 0px 10px;
+    max-width:20%;
+    min-width:150px;
+    height:auto;
+}/*presentation.html*/
 
 #badge {padding: 10px 10px 0px 10px;}/*index.html*/
 
-#testpic {padding: 10px 10px 0px 10px;}/*laborationer.html*/
+#testpic {
+	padding: 10px 10px 0px 10px;
+	max-width:150px;
+	height:auto;
+}/*laborationer.html*/
 
 #spritestart {
 	background-position:0px -48px;

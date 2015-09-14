@@ -97,7 +97,6 @@ body{
 	font-family: 'playfair', serif;
 	font-size:200%;
 	background: #BF8B9C url(pics/jslogoblueyellow.svg) no-repeat;
-	box-shadow: 2px 2px 2px black;
 }
 /*header*/
 
@@ -105,35 +104,49 @@ body{
 
 
 /*images*/
-#dummies {float: left; padding: 10px 10px 0px 10px;}/*presentation.html*/
+#dummies {
+    display:none;
+}/*presentation.html*/
 
-#badge {padding: 10px 10px 0px 10px;}/*index.html*/
+#badge {
+    padding: 10px 10px 0px 10px;
+    max-width:70%;
+	height:auto;
+}/*index.html*/
 
-#testpic {padding: 10px 10px 0px 10px;}/*laborationer.html*/
+#testpic {
+    padding: 10px 10px 0px 10px;
+    max-width:70%;
+	height:auto;
+}/*laborationer.html*/
 
 #spritestart {
-	background-position:0px -48px;
+	background-position:0px -35px;
 }
-#spritestart:hover:not(.activesprite){background-position:0px 0px;}
+#spritestart:hover:not(.activesprite){background-position:0px 13px;}
 
 #spritelabb{
-		background-position:0px -144px;
+		background-position:0px -131px;
 }
-#spritelabb:hover:not(.activesprite){background-position:0px -96px;}
+#spritelabb:hover:not(.activesprite){background-position:0px -83px;}
 
 #spriteindex{
-		background-position:0px -240px;
+		background-position:0px -227px;
 }
-#spriteindex:hover:not(.activesprite){background-position:0px -192px;}
+#spriteindex:hover:not(.activesprite){background-position:0px -179px;}
 
 #spritekontakt{
-		background-position:0px -336px;
+		background-position:0px -323px;
 }
-#spritekontakt:hover:not(.activesprite){background-position:0px -288px;}
+#spritekontakt:hover:not(.activesprite){background-position:0px -275px;}
 
 
 
 .sprites {
+	background-image:url(../pics/sprite.png);
+	width:24px;
+	height:24px;
+	background-repeat:no-repeat;
 	
 
 }
@@ -154,7 +167,7 @@ body{
 #myvid{
 	padding: 10px;
 	height:auto;
-	width:70%;
+	width:100%;
 }
 /*videos*/
 
@@ -177,7 +190,6 @@ body{
 }
 #navigation li a {
     width:100%;
-	box-shadow: 2px 2px 2px black;
 	padding:15px 0px 15px 0px;
 	border:1px solid black;
 	text-decoration:none;
@@ -202,7 +214,6 @@ body{
 /*content*/
 #content{
 	width:auto;
-	box-shadow: 2px 2px 2px black;
 	border:1px solid black;
 	background-color: #A6B2BE;
 	text-align:left;
@@ -320,6 +331,5 @@ body{
 	clear:none;
 	padding:10px;
 	background-color:#EDEFF1;
-	box-shadow: 2px 2px 2px black;
 }
 /*footer*/
