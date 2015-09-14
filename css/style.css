@@ -114,33 +114,31 @@ body{
 #spritestart {
 	background-position:0px -48px;
 }
-#spritestart:hover{background-position:0px 0px;}
+#spritestart:hover:not(.activesprite){background-position:0px 0px;}
 
 #spritelabb{
 		background-position:0px -144px;
 }
-#spritelabb:hover{background-position:0px -96px;}
+#spritelabb:hover:not(.activesprite){background-position:0px -96px;}
 
 #spriteindex{
 		background-position:0px -240px;
 }
-#spriteindex:hover{background-position:0px -192px;}
+#spriteindex:hover:not(.activesprite){background-position:0px -192px;}
 
 #spritekontakt{
 		background-position:0px -336px;
 }
-#spritekontakt:hover{background-position:0px -288px;}
+#spritekontakt:hover:not(.activesprite){background-position:0px -288px;}
 
 
-.sprites>span{
-	display:none;
-}
+
 .sprites {
 	background-image:url(../pics/sprite.png);
 	width:0px;
 	height:24px;
-	background-position: 0px 0px;
-	display:block;
+	background-repeat:no-repeat;
+
 }
 
 .right{
@@ -177,21 +175,18 @@ body{
 	border: 0px solid black;
 }
 #navigation li {
-	margin-top:10px;
 	display:inline-block;
+	margin:10px 20px 10px 20px;
 }
-#navigation li a{
+#navigation li a {
 
 	box-shadow: 2px 2px 2px black;
-	padding-top:2px;
-	padding-bottom:2px;
-	padding-left:24px;
+	padding:2px 10px 2px 24px;
 	border:1px solid black;
 	text-decoration:none;
 	color:#000000;
 	background-color:#BF8B76;
-	display:inline;
-	
+
 }
 
 #navigation li a:hover:not(.active){
