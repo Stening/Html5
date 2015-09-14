@@ -139,12 +139,12 @@ body{
 .sprites>span{
 	display:none;
 }
-.sprites {
+.sprites no-repeat {
 	padding:0px;
 	width:24px;
 	height:24px;
 	background-position: 0px 0px;
-	display:block;
+	display:inline-block;
 }
 
 .right{
@@ -178,10 +178,11 @@ body{
 }
 #navigation ul{
 	border: 0px solid black;
-	
+	display:inline-block;
 }
 #navigation li{
 		margin-top:10px;
+		display:inline-block;
 }
 #navigation li a{
 	margin-left:50px;
@@ -192,7 +193,7 @@ body{
 	text-decoration:none;
 	color:#000000;
 	background-color:#BF8B76;
-	display:block;
+	display:inline-block;
 	width:200px;
 	
 }
