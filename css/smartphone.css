@@ -105,7 +105,13 @@ body{
 
 /*images*/
 #dummies {
-    display:none;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+    max-width:50%;
+    min-width:40%;
+	height:auto;
 }/*presentation.html*/
 
 #badge {
@@ -165,7 +171,7 @@ body{
 
 /*videos*/
 #myvid{
-	padding: 10px;
+	margin: 0px;
 	height:auto;
 	width:100%;
 }

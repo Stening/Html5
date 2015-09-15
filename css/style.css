@@ -113,7 +113,10 @@ body{
     height:auto;
 }/*presentation.html*/
 
-#badge {padding: 10px 10px 0px 10px;}/*index.html*/
+#badge {
+	padding: 10px 10px 0px 10px;
+	
+}/*index.html*/
 
 #testpic {
 	padding: 10px 10px 0px 10px;
@@ -152,9 +155,9 @@ body{
 }
 
 .right{
-	max-width:300px;
-	width:auto;
-	height:250px;
+
+	max-width:30%;
+	height:auto;
 	float:right;
 	padding-right:30%;
 }
@@ -165,7 +168,9 @@ body{
 
 /*videos*/
 #myvid{
-	padding: 10px;
+	display:block;
+	margin-left: auto;
+	margin-right:auto;
 	height:auto;
 	width:70%;
 }
@@ -196,7 +201,6 @@ body{
 	text-decoration:none;
 	color:#000000;
 	background-color:#BF8B76;
-
 }
 
 #navigation li a:hover:not(.active){
