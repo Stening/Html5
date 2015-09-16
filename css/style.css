@@ -144,20 +144,15 @@ body{
 #spritekontakt{
 		background-position:0px -336px;
 }
-#spritekontakt:hover:not(.activesprite){background-position:0px -288px;}
-
-
+#spritekontakt:hover:not(.activesprite){background-position: 0px -288px;}
 
 .sprites {
 	background-image:url(../pics/sprite.png);
 	width:0px;
 	height:24px;
 	background-repeat:no-repeat;
-
 }
-
 .right{
-
 	max-width:30%;
 	height:auto;
 	float:right;
@@ -204,10 +199,12 @@ body{
 	text-decoration:none;
 	color:#000000;
 	background-color:#BF8B76;
+	transition:background-color 1s, padding 1s;
 }
 
 #navigation li a:hover:not(.active){
 	background-color:#F7B499;
+	padding:2px 20px 2px 30px;
 }
 #navigation .active{
 	color:#000000;
