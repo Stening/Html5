@@ -97,6 +97,7 @@ body{
 	font-family: 'playfair', serif;
 	font-size:200%;
 	background: #BF8B9C url(pics/jslogoblueyellow.svg) no-repeat;
+	background-position:left;
 }
 /*header*/
 
@@ -115,34 +116,44 @@ body{
 }/*presentation.html*/
 
 #badge {
-    padding: 10px 10px 0px 10px;
-    max-width:70%;
+	padding: 10px 10px 0px 10px;
+	max-width:30%;
 	height:auto;
 }/*index.html*/
 
 #testpic {
     padding: 10px 10px 0px 10px;
-    max-width:70%;
-	height:auto;
+    max-width:50%;
+	max-height:100px;
 }/*laborationer.html*/
 
 #spritestart {
 	background-position:0px -35px;
+	border:1px solid black;
 }
 #spritestart:hover:not(.activesprite){background-position:0px 13px;}
 
 #spritelabb{
 		background-position:0px -131px;
+		border-left:1px solid black;
+		border-right:1px solid black;
+		border-bottom:1px solid black;
 }
 #spritelabb:hover:not(.activesprite){background-position:0px -83px;}
 
 #spriteindex{
 		background-position:0px -227px;
+		border-left:1px solid black;
+		border-right:1px solid black;
+		border-bottom:1px solid black;
 }
 #spriteindex:hover:not(.activesprite){background-position:0px -179px;}
 
 #spritekontakt{
 		background-position:0px -323px;
+		border-left:1px solid black;
+		border-right:1px solid black;
+		border-bottom:1px solid black;
 }
 #spritekontakt:hover:not(.activesprite){background-position:0px -275px;}
 
@@ -158,11 +169,10 @@ body{
 }
 
 .right{
-	max-width:300px;
-	width:auto;
-	height:250px;
+	max-width:50%;
+	height:auto;
 	float:right;
-	padding-right:30%;
+	padding-right:10%;
 }
 /*images*/
 
@@ -191,13 +201,12 @@ body{
 	border: 0px solid black;
 }
 #navigation li {
-
+	
 	margin:0px;
 }
 #navigation li a {
     width:100%;
 	padding:15px 0px 15px 0px;
-	border:1px solid black;
 	text-decoration:none;
 	color:#000000;
 	background-color:#BF8B76;
@@ -260,6 +269,7 @@ body{
 	background:url(pics/bluearrow.svg) no-repeat;
 	background-position: 5px 30px;
 	background-size:50px;
+	line-height:200%;
 }
 
 

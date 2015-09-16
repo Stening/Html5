@@ -63,7 +63,7 @@ body{
 	background-color: transparent;
 	margin:auto;
 	max-width:1200px;
-
+	width:auto;
 	font-size:16px;
 	line-height:16px;
 }
@@ -115,12 +115,14 @@ body{
 
 #badge {
 	padding: 10px 10px 0px 10px;
+    max-width:10%;
+	height:auto;
 	
 }/*index.html*/
 
 #testpic {
 	padding: 10px 10px 0px 10px;
-	max-width:150px;
+	max-width:20%;
 	height:auto;
 }/*laborationer.html*/
 
@@ -181,17 +183,18 @@ body{
 
 /*meny*/
 #navigation{
-	margin:0px 0px 10px 0px;
 	text-align:center;
 	font-size:100%;
 	font-family: 'Merriweather', serif;
+	width:100%;
 }
 #navigation ul{
 	border: 0px solid black;
+	width:100%;
 }
 #navigation li {
 	display:inline-block;
-	margin:10px 20px 10px 20px;
+	margin:10px 2% 20px 2%;
 }
 #navigation li a {
 
@@ -260,6 +263,7 @@ body{
 	background:url(pics/bluearrow.svg) no-repeat;
 	background-position: 5px 30px;
 	background-size:50px;
+	line-height:200%;
 }
 
 
