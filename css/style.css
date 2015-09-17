@@ -96,7 +96,11 @@ body{
 	box-shadow: 2px 2px 2px black;
 	background-color: #BF8B9C;
 	border:1px solid black;
-	padding:10px;
+	padding:10px 10px 10px 50px;
+	background-repeat:no-repeat;
+	background-image:url(../pics/robot.gif);
+	
+	background-size:50px;
 	transition:background-color 1s, padding 1s;
 	border-radius:10px;
 	font-size:130%;
