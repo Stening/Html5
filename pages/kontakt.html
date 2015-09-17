@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="../pics/favicon.png" type="image/png"/>
-    <link rel="apple-touch-icon" href="../pics/icon57x57.png" type="image/png"/>
-    <link rel="icon" href="../pics/icon128x128.png" type="image/png"/>
+    <link rel="shortcut icon" href="../pics/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../pics/icon57x57.png" type="image/png" />
+    <link rel="icon" href="../pics/icon128x128.png" type="image/png" />
     <title>Kontakt</title>
     <link rel="stylesheet" type="text/css" media="screen and (min-width:481px)" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" media="only screen and (max-width:480px)" href="../css/smartphone.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <a id="jumptotop" href="kontakt.html#header" >Hoppa till toppen av sidan</a>
+    <a id="jumptotop" href="kontakt.html#header">Hoppa till toppen av sidan</a>
     <div id="container">
         <div id="header">
             <h1>Kontakt</h1>
@@ -52,50 +52,54 @@
                             </select>
                         </fieldset>
                     </div>
-                        <fieldset>
-                            <legend>Vilken är Sveriges huvudstad?</legend>
-                            <p>
-                                <input type="radio" name="question" id="G">
-                                <label for="G">Göteborg</label>
-                            </p>
-                            <p>
-                                <input type="radio" name="question" id="S" checked>
-                                <label for="S">Stockholm</label>
-                            </p>
-                            <p>
-                                <input type="radio" name="question" id="K">
-                                <label for="K">Kalmar</label>
-                            </p>
-                            <p>
-                                <input type="radio" name="question" id="L">
-                                <label for="L">Luleå</label>
-                            </p>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Telefon eller mail?</legend>
-                            <p>
-                                <input type="checkbox" name="contact[]" id="mail" value="email">
-                                <label for="mail">mail</label>
-                            </p>
-                            <p>
-                                <input type="checkbox" name="contact[]" id="telefon" value="number">
-                                <label for="telefon">telefon</label>
-                            </p>
-                            <p>Skriv din mail eller telefon nummer</p>
-                            <p>
-                                Mail:<input  type="email" id="inputmail" required/>
-                                <label for="inputmail">exempel: example@email.com</label>
-                            </p>
-                            <p>
-                               Telefon nummner (inklusive riktnummer) <input type="tel" id="inputtel" required pattern="[0-9]{10}"/>
-                            </p>
-                            <p>
-                                Eventuell bild på dig (frivillig)<input id="inputfile" type="file" multiple />
-                            </p>
-                            <p>
-                                Din favoritfärg? (frivillig) <input id="inputcolor" type="color"/>
-                            </p>
-                        </fieldset>
+                    <fieldset>
+                        <legend>Vilken är Sveriges huvudstad?</legend>
+                        <p>
+                            <input type="radio" name="question" id="G">
+                            <label for="G">Göteborg</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="question" id="S" checked>
+                            <label for="S">Stockholm</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="question" id="K">
+                            <label for="K">Kalmar</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="question" id="L">
+                            <label for="L">Luleå</label>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Telefon eller mail?</legend>
+                        <p>
+                            <input type="checkbox" name="contact[]" id="mail" value="email">
+                            <label for="mail">mail</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="contact[]" id="telefon" value="number">
+                            <label for="telefon">telefon</label>
+                        </p>
+                        <p>Skriv din mail eller telefon nummer</p>
+                        <p>
+                            Mail:
+                            <input type="email" id="inputmail" required/>
+                            <label for="inputmail">exempel: example@email.com</label>
+                        </p>
+                        <p>
+                            Telefon nummner (inklusive riktnummer)
+                            <input type="tel" id="inputtel" required pattern="[0-9]{10}" />
+                        </p>
+                        <p>
+                            Eventuell bild på dig (frivillig)
+                            <input id="inputfile" type="file" multiple />
+                        </p>
+                        <p>
+                            Din favoritfärg? (frivillig)
+                            <input id="inputcolor" type="color" />
+                        </p>
+                    </fieldset>
                     <p>
                         <input type="submit" value="Skicka" />
                     </p>
