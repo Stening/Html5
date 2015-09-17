@@ -2,25 +2,33 @@
 <html lang="sv">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../pics/favicon.png" type="image/png"/>
-    <link rel="apple-touch-icon" href="../pics/icon57x57.png" type="image/png"/>
-    <link rel="icon" href="../pics/icon128x128.png" type="image/png"/>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="../pics/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../pics/icon57x57.png" type="image/png" />
+    <link rel="icon" href="../pics/icon128x128.png" type="image/png" />
     <title>Startsida</title>
     <link rel="stylesheet" type="text/css" media="screen and (min-width:481px)" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" media="only screen and (max-width:480px)" href="../css/smartphone.css" />
     <link rel="stylesheet" type="text/css" media="handdheld" href="../css/smartphone.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
+    <a id="jumptotop" href="presentation.html#header" >Hoppa till toppen av sidan</a>
     <div id="container">
         <div id="header">
             <h1>Startsida</h1>
             <div id="navigation">
                 <ul>
                     <li><a id="spritestart" class="sprites active activesprite" href="presentation.html">Startsida</a></li>
-                    <li><a id="spritelabb" class="sprites" href="laborationer.html">Laborationer</a></li>
+                    <li>
+                        <a id="spritelabb" class="sprites" href="laborationer.html">Laborationer</a>
+                        <ul>
+                            <li>
+                                <a id="labbmeny_1_4" href="../uppgifter/vecka_1/1.4.html">1.4</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a id="spriteindex" class="sprites" href="../index.html">Index</a></li>
                     <li><a id="spritekontakt" class="sprites" href="kontakt.html">Kontakt</a></li>
                 </ul>
@@ -28,7 +36,7 @@
         </div>
         <!--följande är en beskrivning om mig och hur jag hamnade i denna utbildning.-->
         <div id="content">
-            <img id="dummies" src="../pics/dummies.jpg" alt="Några dockor"/>
+            <img id="dummies" src="../pics/dummies.jpg" alt="Några dockor" />
             <div id="aboutme">
                 <h1>Lite om mig</h1>
                 <p>
@@ -42,11 +50,12 @@
                     Innan jag ansökte till denna kursen så letade jag efter jobb. Jag hade nyligen tagit examen på en annan högskola, men jobbscenen var inte vad jag hade förväntat mig. Den förra högskolan handlade mycket om att programmera PLC:n (Programmable Logic Contoller).
                     En dag så fick jag ett samtal ifrån en kompis, han undrade om vi skulle äta lunch i kalmar. Efter vi åt så frågade han om jag ville följa med till ett "öppet hus" på en programmeringsutbildning. Jag hade inget planerat den dagen så
                     jag hängde med. Jag pratade lite med dem på högskolan och fick lite information om vad dem gjorde och jag tyckte det lät intressant, så jag ansök till slut.
-                    </p>
-                    <p>
-                    Jag hade en aning om vad programmering innebad för att jag hade programmeratpå den förra högskolan och lite smått hemma. Jag ville iallafall testa denna sortens kodning så jag tog en online kurs i C#. Kanske hade jag tur och fick en bra instruktör, men jag tyckte det var väldigt roligt. Det var inte alls så
-                    svårt som jag hade föreställt mig, det var väldigt förlåtande med sånna saker som att mjukvaran säger till var och vad man gör för fel. Man får också aktiv hjälp med strukturen om man aktiverar intellisense.
-                    </p>
+                </p>
+                <p>
+                    Jag hade en aning om vad programmering innebad för att jag hade programmeratpå den förra högskolan och lite smått hemma. Jag ville iallafall testa denna sortens kodning så jag tog en online kurs i C#. Kanske hade jag tur och fick en bra instruktör, men
+                    jag tyckte det var väldigt roligt. Det var inte alls så svårt som jag hade föreställt mig, det var väldigt förlåtande med sånna saker som att mjukvaran säger till var och vad man gör för fel. Man får också aktiv hjälp med strukturen
+                    om man aktiverar intellisense.
+                </p>
             </div>
             <!--Följande är en lista på mina styrkor och svagheter-->
             <div id="str_weak">
