@@ -205,10 +205,12 @@ body{
 #navigation ul{
 	border: 0px solid black;
 	width:100%;
+	margin:10px 0% 20px 0%;
 }
 #navigation li {
 	display:inline-block;
-	margin:10px 2% 20px 2%;
+	margin:10px 10px 10px 10px;
+
 }
 #navigation li a {
 	box-shadow: 2px 2px 2px black;
@@ -232,24 +234,35 @@ body{
 #navigation ul li ul li a {
 		min-width: 125px;
         display: none;
-        position: relative;
+        position: absolute;
         z-index: 999;
         left: 0;
 	
 }
 #navigation ul li ul{
-        display: none;
+	display:none;
     }
-#navigation ul li ul.dropdown {
-		min-width: 125px;
+#navigation ul ul a {
+		width: 325px;
+		height:200px;
         display: none;
-        position: absolute;
+        position: relative;
         z-index: 999;
         left: 0;
+        text-align:center;
 }
-#navigation ul li a:hover ul li a.dropdown{
+
+
+#navigation ul li:hover ul{
 	display:block;
 }
+#navigation ul li:hover ul li{
+	display:block;
+}
+#navigation ul li:hover ul a{
+	display:block;
+}
+
 /*meny*/
 
 

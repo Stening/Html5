@@ -34,7 +34,7 @@
                         <fieldset>
                             <legend>Info om dig</legend>
                             <label>Skriv ditt namn:
-                                <input autofocus type="text" name="errand" />
+                                <input autofocus type="text" name="errand" required/>
                             </label>
                             <p> Har du ett husdjur?</p>
                             <select name="title">
@@ -75,12 +75,17 @@
                             </p>
                             <p>Skriv din mail eller telefon nummer</p>
                             <p>
-                                <input type="email" name="inputmail" />
-                                <label for="inputmail">Mail</label>
+                                Mail:<input type="email" name="inputmail" required/>
+                                <label for="email">exempel: example@email.com</label>
                             </p>
                             <p>
-                                <input type="tel" name="inputtel" />
-                                <label for="inputtel">telefon nummner</label>
+                               Telefon nummner (inklusive riktnummer) <input type="tel" name="inputtel" required pattern="[0-9]{10}"/>
+                            </p>
+                            <p>
+                                Eventuell bild på dig (frivillig)<input name="inputfile" type="file" multiple />
+                            </p>
+                            <p>
+                                Din favoritfärg? (frivillig) <input name="inputcolor" type="color"/>
                             </p>
                         </fieldset>
                     <p>
