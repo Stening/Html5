@@ -54,8 +54,17 @@ body{
 	background: #BEB0A8;
 	width:auto;
 }
+
+#jumptotop{display:none;}
+
 /*body*/
 
+
+#jumptotop:hover{
+	padding:8px 8px 8px 8px;
+	background-color: #EDADC2;
+}
+/*body*/
 
 
 /*container/fonts*/
@@ -63,7 +72,7 @@ body{
 	background-color: transparent;
 	margin:auto;
 	max-width:1200px;
-
+	overflow-x:hidden;
 	font-size:16px;
 	line-height:16px;
 }
@@ -220,6 +229,10 @@ body{
 	color:#000000;
 	background-color:#85766E;
 }
+
+#labbmeny_1_4 {display:none;}
+#navigation ul li ul {display:none;}
+
 /*meny*/
 
 

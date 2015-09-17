@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <a id="jumptotop" href="kontakt.html#header" >Hoppa till toppen av sidan</a>
     <div id="container">
         <div id="header">
             <h1>Kontakt</h1>
@@ -29,11 +30,11 @@
         <div id="content">
             <div id="inputform">
                 <form action="http://webproduction.standout.se/form.php" method="post">
-                    <div id="inputname">
+                    <div id="inputinfo">
                         <fieldset>
                             <legend>Info om dig</legend>
                             <label>Skriv ditt namn:
-                                <input type="text" name="errand" />
+                                <input autofocus type="text" name="errand" />
                             </label>
                             <p> Har du ett husdjur?</p>
                             <select name="title">
@@ -71,6 +72,15 @@
                             <p>
                                 <input type="checkbox" name="contact[]" id="telefon" value="number">
                                 <label for="telefon">telefon</label>
+                            </p>
+                            <p>Skriv din mail eller telefon nummer</p>
+                            <p>
+                                <input type="email" name="inputmail" />
+                                <label for="inputmail">Mail</label>
+                            </p>
+                            <p>
+                                <input type="tel" name="inputtel" />
+                                <label for="inputtel">telefon nummner</label>
                             </p>
                         </fieldset>
                     <p>
