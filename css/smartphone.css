@@ -314,9 +314,10 @@ body{
 #content select{
 	margin-left: 5px;
 }
-#content table{
+#table{
 	margin: 0px 0px 0px 10px;
 	background-color: #A6B2BE;
+	overflow-x:scroll;
 	overflow:auto;
 	
 }
