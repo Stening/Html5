@@ -150,6 +150,12 @@ body{
 }
 #spritelabb:hover:not(.activesprite){background-position:0px -83px;}
 
+#spritelabb_1_4{
+		background-position:0px -131px;
+		border:1px solid black;
+}
+#spritelabb_1_4:hover:not(.activesprite){background-position:0px -83px;}
+
 #spriteindex{
 		background-position:0px -227px;
 		border-left:1px solid black;
@@ -271,7 +277,7 @@ body{
 	background-color:#F7B499;
 }
 #content h1{
-	font-size:150%;
+	font-size:100%;
 	padding:10px;
 	padding-top:30px;
 	padding-left:40px;
@@ -280,14 +286,14 @@ body{
 	clear:none;
 	text-align:left;
 	background:url(pics/bluearrow.svg) no-repeat;
-	background-position: 5px 30px;
+	background-position: 5px 32px;
 	background-size:50px;
 	line-height:200%;
 }
 
 
 #content h2{
-	font-size:140%;
+	font-size:100%;
 	padding:10px;
 	padding-top:20px;
 	font-weight:bold;
