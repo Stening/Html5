@@ -55,7 +55,7 @@ table {
 #container{
 	margin-left:10px;
 	border:5px solid black;
-	margin-top:30px;
+	margin-top:0px;
 	text-align:center;
 	background-color:white;
 	height:500px;
@@ -98,49 +98,45 @@ table {
 	top:5%;
 	font-size:50px;
 }
-#restartbutton{
-	position:absolute;
-	top:40%;
-	left:75%;
-	font-size:50px;
-	border:5px solid black;
-	padding:10px;
-	
-}
 
 #startingtext{
-	top:10%;
+	top:20%;
 	font-size:100px;
 	position:absolute;
-	left:20%;
+	left:10%;
 	display:none;
 }
 #startingtimer{
-	top:10%;
+	top:20%;
 	font-size:100px;
 	position:absolute;
 	left:48%;
 	display:none;
 }
 
-#beginbutton{
-	position:absolute;
-	top:50%;
-	left:75%;
-	font-size:50px;
+#restartbutton{
+	width:200px;
+	font-size:40px;
 	border:5px solid black;
-	padding:10px;
+	
 }
+#beginbutton{
+	width:200px;
+	font-size:40px;
+	border:5px solid black;
+}
+
 #survivaltimer{
-	top:10%;
-	font-size:100px;
+	display:none;
 	position:absolute;
-	left:80%;
-	display:block;
+	left:90%;
+	top:20%;
+	font-size:40px;
 }
 
 
 #footer{
+	display:none;
 	top: 500px;
 	position:relative;
 	margin-left: auto;

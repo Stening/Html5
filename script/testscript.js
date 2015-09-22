@@ -129,23 +129,23 @@ setInterval(function() {
         startingtext.style.display = "none";
         startingtimer.style.display = "none";
         if (testbuttonxpos < xpos) {
-            testbuttonxpos = (testbuttonxpos + 10);
+            testbuttonxpos = (testbuttonxpos + 1);
             testbutton.style.marginTop = (testbuttonxpos + "px");
         }
         if (testbuttonxpos > xpos) {
-            testbuttonxpos = (testbuttonxpos - 10);
+            testbuttonxpos = (testbuttonxpos - 1);
             testbutton.style.marginTop = (testbuttonxpos + "px");
         }
         if (testbuttonypos < ypos) {
-            testbuttonypos = (testbuttonypos + 10);
+            testbuttonypos = (testbuttonypos + 1);
             testbutton.style.marginLeft = (testbuttonypos + "px");
         }
         if (testbuttonypos > ypos) {
-            testbuttonypos = (testbuttonypos - 10);
+            testbuttonypos = (testbuttonypos - 1);
             testbutton.style.marginLeft = (testbuttonypos + "px");
         }
     }
-}, 100);
+}, 7);
 
 
 
@@ -156,7 +156,7 @@ if ((testbuttonypos === ypos) && (testbuttonxpos === xpos) && (startingtimerInt 
             gameover = 1;
             snoopmusic.pause();
         }
-}, 10);
+}, 1);
 
 
 setInterval(function(){
