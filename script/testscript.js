@@ -1,24 +1,3 @@
-/*
-var knapp1 = document.getElementById("indexmeny_1");
-var clicksound = new Audio("clicksound.wav");
-
-knapp1.onmouseover = function(){
-    clicksound.play();
-    alert("testing!")
-};*/
-/*
-var header = document.getElementById("header");
-var footer = document.getElementById("dummies");
-
-header.onclick = function animate(){
-    $('#content').animate({'margin-top': '300px'},500);
-};
-
-
-footer.onclick = function resetanimation(){
-    $('#content').animate({'margin-top': '0px'},500);
-};*/
-
 var xpos = 0;
 var ypos = 0;
 var testbutton = document.getElementById("testbutton");
@@ -28,15 +7,46 @@ var testbuttonypos = 0;
 var gameoverdisplay = document.getElementById("gameoverdisplay");
 var gameover = 0;
 var gamestarted = 0;
+var startingtext = document.getElementById("startingtext");
+var startingtimer = document.getElementById("startingtimer");
+var survivaltimer = document.getElementById("survivaltimer");
+var restartbutton = document.getElementById("restartbutton");
+var beginbutton = document.getElementById("beginbutton");
+var startingtimerInt = 5;
+var snoopmusic = document.getElementById("snoopsong");
+
+beginbutton.onclick = function(){
+    if(gameover === 0){
+    startingtext.style.display = "block";
+    startingtimer.style.display = "block";
+    gamestarted = 1;
+    }
+};
+
+restartbutton.onclick = function(){
+    if(gameover === 1){
+    gamestarted = 1;
+    gameover = 0;
+    startingtimerInt = 5;
+    startingtext.style.display = "block";
+    startingtimer.style.display = "block";
+    gameoverdisplay.style.display = "none";
+    thebox.style.marginTop = (0 + "px");
+    thebox.style.marginLeft = (0 + "px");
+    testbutton.style.marginLeft = (0 + "px");
+    testbutton.style.marginTop = (0 + "px");
+    ypos = 0;
+    xpos = 0;
+    testbuttonxpos = 0;
+    testbuttonypos = 0;
+    }
+};
 
 
-if (gameover === 1) {
-    gameoverdisplay.style.display = "block";
-}
 
 
 function movedown() {
-    if (xpos <= 470) {
+    if (xpos <= 440) {
         xpos = (xpos + 10);
         console.log(xpos);
         thebox.style.marginTop = (xpos + "px");
@@ -62,8 +72,9 @@ function moveleft() {
     }
 }
 
+
 function moveright() {
-    if (ypos < 1180) {
+    if (ypos < 1150) {
         ypos = (ypos + 10);
         console.log(ypos);
         thebox.style.marginLeft = (ypos + "px");
@@ -72,8 +83,9 @@ function moveright() {
 }
 
 
-//if (gameover === 0) {
+
     document.onkeydown = function(e) {
+        if((gameover === 0 ) && (gamestarted === 1)){
         switch (e.which) {
             case 37:
                 console.log('left');
@@ -92,42 +104,67 @@ function moveright() {
                 movedown();
                 break;
         }
-    };
-//}
-/*
- if(gameover === 0){
-     controls();
- }*/
+    }
+};
 
 
+
+console.log(startingtimerInt);
 setInterval(function() {
-    console.log("intervall");
-    if (testbuttonxpos < xpos) {
-        testbuttonxpos = (testbuttonxpos + 10);
-        testbutton.style.marginTop = (testbuttonxpos + "px");
-    }
-    if (testbuttonxpos > xpos) {
-        testbuttonxpos = (testbuttonxpos - 10);
-        testbutton.style.marginTop = (testbuttonxpos + "px");
-    }
-    if (testbuttonypos < ypos) {
-        testbuttonypos = (testbuttonypos + 10);
-        testbutton.style.marginLeft = (testbuttonypos + "px");
-    }
-    if (testbuttonypos > ypos) {
-        testbuttonypos = (testbuttonypos - 10);
-        testbutton.style.marginLeft = (testbuttonypos + "px");
-    }
-    if ((testbuttonypos === ypos) && (testbuttonxpos === xpos)){
-        console.log("i am caught");
+    if ((startingtimerInt > 0) && (gamestarted === 1)) {
+        startingtimerInt = (startingtimerInt - 1);
+        console.log(startingtimerInt);
+        document.getElementById("startingtimer").innerHTML = startingtimerInt;
     }
 }, 1000);
 
 
+setInterval(function() {
+    if ((startingtimerInt === 0) && (gamestarted === 1)) {
+        if(gameover === 0){
+            snoopmusic.volume = 0.2;
+            snoopmusic.play();
+        }
+        console.log("intervall");
+        startingtext.style.display = "none";
+        startingtimer.style.display = "none";
+        if (testbuttonxpos < xpos) {
+            testbuttonxpos = (testbuttonxpos + 10);
+            testbutton.style.marginTop = (testbuttonxpos + "px");
+        }
+        if (testbuttonxpos > xpos) {
+            testbuttonxpos = (testbuttonxpos - 10);
+            testbutton.style.marginTop = (testbuttonxpos + "px");
+        }
+        if (testbuttonypos < ypos) {
+            testbuttonypos = (testbuttonypos + 10);
+            testbutton.style.marginLeft = (testbuttonypos + "px");
+        }
+        if (testbuttonypos > ypos) {
+            testbuttonypos = (testbuttonypos - 10);
+            testbutton.style.marginLeft = (testbuttonypos + "px");
+        }
+    }
+}, 100);
 
 
 
 
+setInterval(function(){
+if ((testbuttonypos === ypos) && (testbuttonxpos === xpos) && (startingtimerInt === 0) && (gamestarted === 1)) {
+            console.log("i am caught");
+            gameover = 1;
+            snoopmusic.pause();
+        }
+}, 10);
+
+
+setInterval(function(){
+if(gameover === 1){
+        gameoverdisplay.style.display = "block";
+        gamestarted = 0;
+}
+}, 100);
 
 
 
