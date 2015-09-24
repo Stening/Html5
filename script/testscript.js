@@ -20,31 +20,37 @@ var bombisout = false;
 var bombxpos = 0;
 var bombypos = 0;
 var bombexplosiontime;
+var explosionsound = document.getElementById("explosionsound");
+var snoopdazed = false;
+var bombradius = [bombxpos + 50, bombxpos - 50, bombypos + 50, bombypos - 50];
+snoopmusic.volume = 0.2;
 
-beginbutton.onclick = function(){
-    if(gameover === 0){
-    startingtext.style.display = "block";
-    startingtimer.style.display = "block";
-    gamestarted = 1;
+
+
+beginbutton.onclick = function() {
+    if (gameover === 0) {
+        startingtext.style.display = "block";
+        startingtimer.style.display = "block";
+        gamestarted = 1;
     }
 };
 
-restartbutton.onclick = function(){
-    if(gameover === 1){
-    gamestarted = 1;
-    gameover = 0;
-    startingtimerInt = 5;
-    startingtext.style.display = "block";
-    startingtimer.style.display = "block";
-    gameoverdisplay.style.display = "none";
-    thebox.style.marginTop = (0 + "px");
-    thebox.style.marginLeft = (0 + "px");
-    testbutton.style.marginLeft = (0 + "px");
-    testbutton.style.marginTop = (0 + "px");
-    ypos = 0;
-    xpos = 0;
-    testbuttonxpos = 0;
-    testbuttonypos = 0;
+restartbutton.onclick = function() {
+    if (gameover === 1) {
+        gamestarted = 1;
+        gameover = 0;
+        startingtimerInt = 5;
+        startingtext.style.display = "block";
+        startingtimer.style.display = "block";
+        gameoverdisplay.style.display = "none";
+        thebox.style.marginTop = (0 + "px");
+        thebox.style.marginLeft = (0 + "px");
+        testbutton.style.marginLeft = (0 + "px");
+        testbutton.style.marginTop = (0 + "px");
+        ypos = 0;
+        xpos = 0;
+        testbuttonxpos = 0;
+        testbuttonypos = 0;
     }
 };
 
@@ -52,66 +58,83 @@ restartbutton.onclick = function(){
 
 
 function movedown() {
-    if (xpos <= 440) {
-        xpos = (xpos + 10);
-        console.log(xpos);
-        thebox.style.marginTop = (xpos + "px");
+    if (ypos <= 440) {
+        ypos = (ypos + 10);
+        console.log(ypos);
+        thebox.style.marginTop = (ypos + "px");
         console.log("moved down!");
         thebox.style.transform = 'rotate(90deg)';
     }
 }
 
 function moveup() {
-    if (xpos > 0) {
-        xpos = (xpos - 10);
-        console.log(xpos);
-        thebox.style.marginTop = (xpos + "px");
+    if (ypos > 0) {
+        ypos = (ypos - 10);
+        console.log(ypos);
+        thebox.style.marginTop = (ypos + "px");
         console.log("moved up!");
         thebox.style.transform = 'rotate(270deg)';
     }
 }
 
 function moveleft() {
-    if (ypos > 0) {
-        ypos = (ypos - 10);
-        console.log(ypos);
-        thebox.style.marginLeft = (ypos + "px");
+    if (xpos > 0) {
+        xpos = (xpos - 10);
+        console.log(xpos);
+        thebox.style.marginLeft = (xpos + "px");
         console.log("moved left!");
         thebox.style.transform = 'scaleX(-1)';
     }
 }
 
 function moveright() {
-    if (ypos < 1150) {
-        ypos = (ypos + 10);
-        console.log(ypos);
-        thebox.style.marginLeft = (ypos + "px");
+    if (xpos < 1150) {
+        xpos = (xpos + 10);
+        console.log(xpos);
+        thebox.style.marginLeft = (xpos + "px");
         console.log("done");
         thebox.style.transform = 'scaleX(1)';
     }
 }
 
-function laybomb(){
-    if((gameover === 0) && (bombisout === false)){
-        easterbomb.style.marginLeft = ((ypos + 20) + "px");
-        easterbomb.style.marginTop = ((xpos + 20) + "px");
-        bombxpos = (xpos + 20);
+function laybomb() {
+    if ((gameover === 0) && (bombisout === false) && (startingtimerInt === 0)) {
+        easterbomb.style.marginLeft = ((xpos + 20) + "px");
+        easterbomb.style.marginTop = ((ypos + 20) + "px");
         bombypos = (ypos + 20);
+        bombxpos = (xpos + 20);
         easterbomb.style.display = "block";
         bombisout = true;
     }
 }
 
-    function detonate(){
-    explosion.style.marginLeft = ((bombypos - 40) + "px");
-    explosion.style.marginTop = ((bombxpos - 40) + "px");
-    easterbomb.style.display = "none";
-    explosion.style.display = "block";
+function detonate() {
+    if (gameover === 0) {
+        explosion.style.marginLeft = ((bombxpos - 40) + "px");
+        explosion.style.marginTop = ((bombypos - 40) + "px");
+        easterbomb.style.display = "none";
+        explosion.style.display = "block";
+        explosion.style.backgroundImage = "url(../testing/explosion.gif)";
+        explosionsound.volume = 0.5;
+        explosionsound.play();
+        
+        if (((testbuttonxpos < (bombxpos + 100) && (testbuttonxpos > bombxpos - 100))) && (((testbuttonypos < (bombypos + 100))) && (testbuttonypos > (bombypos - 100)))) {
+            snoopdazed = true;
+        }
+        setTimeout(function() {
+            snoopdazed = false;
+        }, 4000);
+
+        setTimeout(function() {
+            //explosion.style.display = "none";
+            bombisout = false;
+            explosion.style.backgroundImage = "";
+        }, 1000);
     }
+}
 
-
-    document.onkeydown = function(e) {
-        if((gameover === 0 ) && (gamestarted === 1)){
+document.onkeydown = function(e) {
+    if ((gameover === 0) && (gamestarted === 1)) {
         switch (e.which) {
             case 37:
                 console.log('left');
@@ -131,16 +154,11 @@ function laybomb(){
                 break;
             case 32:
                 console.log("bomb");
-                if(bombisout === false){
+                if (bombisout === false) {
                     laybomb();
                 }
-                else{
+                else {
                     detonate();
-                    setTimeout(function(){
-                        explosion.style.display = "none";
-                        bombisout = false;
-                        }, 1000);
-                    
                 }
                 break;
         }
@@ -157,50 +175,58 @@ setInterval(function() {
 }, 1000);
 
 
+/*setInterval(function() {
+    if (bombisout === true) {
+        if (((testbuttonxpos < (bombxpos + 100) && (testbuttonxpos > bombxpos - 100))) && (((testbuttonypos < (bombypos + 100))) && (testbuttonypos > (bombypos - 100)))) {
+            snoopdazed = true;
+        }
+    }
+}, 10);
+*/
+
 setInterval(function() {
-    if ((startingtimerInt === 0) && (gamestarted === 1)) {
-        if(gameover === 0){
-            snoopmusic.volume = 0.2;
-            snoopmusic.play();
+    if ((startingtimerInt === 0) && (gamestarted === 1) && (snoopdazed === false)) {
+        if (gameover === 0) {
         }
         startingtext.style.display = "none";
         startingtimer.style.display = "none";
-        if (testbuttonxpos < xpos) {
-            testbuttonxpos = (testbuttonxpos + 1);
-            testbutton.style.marginTop = (testbuttonxpos + "px");
-        }
-        if (testbuttonxpos > xpos) {
-            testbuttonxpos = (testbuttonxpos - 1);
-            testbutton.style.marginTop = (testbuttonxpos + "px");
-        }
         if (testbuttonypos < ypos) {
             testbuttonypos = (testbuttonypos + 1);
-            testbutton.style.marginLeft = (testbuttonypos + "px");
+            testbutton.style.marginTop = (testbuttonypos + "px");
         }
         if (testbuttonypos > ypos) {
             testbuttonypos = (testbuttonypos - 1);
-            testbutton.style.marginLeft = (testbuttonypos + "px");
+            testbutton.style.marginTop = (testbuttonypos + "px");
+        }
+        if (testbuttonxpos < xpos) {
+            testbuttonxpos = (testbuttonxpos + 1);
+            testbutton.style.marginLeft = (testbuttonxpos + "px");
+        }
+        if (testbuttonxpos > xpos) {
+            testbuttonxpos = (testbuttonxpos - 1);
+            testbutton.style.marginLeft = (testbuttonxpos + "px");
         }
     }
 }, 7);
 
 
-
-
-setInterval(function(){
-if ((testbuttonypos === ypos) && (testbuttonxpos === xpos) && (startingtimerInt === 0) && (gamestarted === 1)) {
-            console.log("i am caught");
-            gameover = 1;
-            snoopmusic.pause();
-        }
+setInterval(function() {
+    if ((testbuttonypos === ypos) && (testbuttonxpos === xpos) && (startingtimerInt === 0) && (gamestarted === 1)) {
+        console.log("i am caught");
+        gameover = 1;
+        snoopmusic.pause();
+    }
+    else if((gamestarted === 1) && (startingtimerInt === 0)){
+         snoopmusic.play();
+    }
 }, 1);
 
 
-setInterval(function(){
-if(gameover === 1){
+setInterval(function() {
+    if (gameover === 1) {
         gameoverdisplay.style.display = "block";
         gamestarted = 0;
-}
+    }
 }, 100);
 
 

@@ -62,12 +62,11 @@ table {
 	width:1200px;
 	float:none;
 }
-
+#explosionsound{
+	display:none;
+}
 #snoopsong{
-	display:block;
-	float:right;
-	top:1000px;
-	left:0px;
+	display:none;
 }
 
 #thebox{
@@ -90,7 +89,7 @@ table {
 #explosion{
 	display:none;
 	position:absolute;
-    background-image:url();
+
     width:150px;
     height:150px;
     background-size: contain;
