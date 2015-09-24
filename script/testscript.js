@@ -14,6 +14,12 @@ var restartbutton = document.getElementById("restartbutton");
 var beginbutton = document.getElementById("beginbutton");
 var startingtimerInt = 5;
 var snoopmusic = document.getElementById("snoopsong");
+var easterbomb = document.getElementById("easterbomb");
+var explosion = document.getElementById("explosion");
+var bombisout = false;
+var bombxpos = 0;
+var bombypos = 0;
+var bombexplosiontime;
 
 beginbutton.onclick = function(){
     if(gameover === 0){
@@ -51,6 +57,7 @@ function movedown() {
         console.log(xpos);
         thebox.style.marginTop = (xpos + "px");
         console.log("moved down!");
+        thebox.style.transform = 'rotate(90deg)';
     }
 }
 
@@ -60,6 +67,7 @@ function moveup() {
         console.log(xpos);
         thebox.style.marginTop = (xpos + "px");
         console.log("moved up!");
+        thebox.style.transform = 'rotate(270deg)';
     }
 }
 
@@ -69,9 +77,9 @@ function moveleft() {
         console.log(ypos);
         thebox.style.marginLeft = (ypos + "px");
         console.log("moved left!");
+        thebox.style.transform = 'scaleX(-1)';
     }
 }
-
 
 function moveright() {
     if (ypos < 1150) {
@@ -79,9 +87,27 @@ function moveright() {
         console.log(ypos);
         thebox.style.marginLeft = (ypos + "px");
         console.log("done");
+        thebox.style.transform = 'scaleX(1)';
     }
 }
 
+function laybomb(){
+    if((gameover === 0) && (bombisout === false)){
+        easterbomb.style.marginLeft = ((ypos + 20) + "px");
+        easterbomb.style.marginTop = ((xpos + 20) + "px");
+        bombxpos = (xpos + 20);
+        bombypos = (ypos + 20);
+        easterbomb.style.display = "block";
+        bombisout = true;
+    }
+}
+
+    function detonate(){
+    explosion.style.marginLeft = ((bombypos - 40) + "px");
+    explosion.style.marginTop = ((bombxpos - 40) + "px");
+    easterbomb.style.display = "none";
+    explosion.style.display = "block";
+    }
 
 
     document.onkeydown = function(e) {
@@ -103,11 +129,23 @@ function moveright() {
                 console.log('down');
                 movedown();
                 break;
+            case 32:
+                console.log("bomb");
+                if(bombisout === false){
+                    laybomb();
+                }
+                else{
+                    detonate();
+                    setTimeout(function(){
+                        explosion.style.display = "none";
+                        bombisout = false;
+                        }, 1000);
+                    
+                }
+                break;
         }
     }
 };
-
-
 
 console.log(startingtimerInt);
 setInterval(function() {
@@ -125,7 +163,6 @@ setInterval(function() {
             snoopmusic.volume = 0.2;
             snoopmusic.play();
         }
-        console.log("intervall");
         startingtext.style.display = "none";
         startingtimer.style.display = "none";
         if (testbuttonxpos < xpos) {
