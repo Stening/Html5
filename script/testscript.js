@@ -58,7 +58,7 @@ restartbutton.onclick = function() {
 
 
 function movedown() {
-    if (ypos <= 440) {
+    if (ypos <= 420) {
         ypos = (ypos + 10);
         console.log(ypos);
         thebox.style.marginTop = (ypos + "px");
@@ -88,7 +88,7 @@ function moveleft() {
 }
 
 function moveright() {
-    if (xpos < 1150) {
+    if (xpos < 1130) {
         xpos = (xpos + 10);
         console.log(xpos);
         thebox.style.marginLeft = (xpos + "px");
@@ -117,7 +117,6 @@ function detonate() {
         explosion.style.backgroundImage = "url(../testing/explosion.gif)";
         explosionsound.volume = 0.5;
         explosionsound.play();
-        
         if (((testbuttonxpos < (bombxpos + 100) && (testbuttonxpos > bombxpos - 100))) && (((testbuttonypos < (bombypos + 100))) && (testbuttonypos > (bombypos - 100)))) {
             snoopdazed = true;
         }
@@ -174,16 +173,6 @@ setInterval(function() {
     }
 }, 1000);
 
-
-/*setInterval(function() {
-    if (bombisout === true) {
-        if (((testbuttonxpos < (bombxpos + 100) && (testbuttonxpos > bombxpos - 100))) && (((testbuttonypos < (bombypos + 100))) && (testbuttonypos > (bombypos - 100)))) {
-            snoopdazed = true;
-        }
-    }
-}, 10);
-*/
-
 setInterval(function() {
     if ((startingtimerInt === 0) && (gamestarted === 1) && (snoopdazed === false)) {
         if (gameover === 0) {
@@ -215,21 +204,13 @@ setInterval(function() {
         console.log("i am caught");
         gameover = 1;
         snoopmusic.pause();
+        gameoverdisplay.style.display = "block";
+        gamestarted = 0;
     }
     else if((gamestarted === 1) && (startingtimerInt === 0)){
          snoopmusic.play();
     }
 }, 1);
-
-
-setInterval(function() {
-    if (gameover === 1) {
-        gameoverdisplay.style.display = "block";
-        gamestarted = 0;
-    }
-}, 100);
-
-
 
 
 
