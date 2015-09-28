@@ -4,6 +4,7 @@ var uppgift2Knapp = document.getElementById("uppgift2button");
 var uppgift3Knapp = document.getElementById("uppgift3button");
 var uppgift4Knapp = document.getElementById("uppgift4button");
 var uppgift5Knapp = document.getElementById("uppgift5button");
+var uppgift6Knapp = document.getElementById("uppgift6button");
 //knappar
 
 
@@ -80,9 +81,6 @@ uppgift3Knapp.onclick = guessingGame;
 
 
 // Uppgift 4
-
-
-
 // Uppgift 4
 
 
@@ -91,6 +89,14 @@ uppgift3Knapp.onclick = guessingGame;
 
 uppgift5Knapp.onclick = function(){
     transformString((prompt("enter the text you want transformed!")));
+};
+
+// Uppgift 5
+
+
+// Uppgift 5
+uppgift6Knapp.onclick = function(){
+    hypotenuse();
 };
 
 // Uppgift 5
