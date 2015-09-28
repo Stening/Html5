@@ -3,6 +3,7 @@ var uppgift1Knapp = document.getElementById("uppgift1button");
 var uppgift2Knapp = document.getElementById("uppgift2button");
 var uppgift3Knapp = document.getElementById("uppgift3button");
 var uppgift4Knapp = document.getElementById("uppgift4button");
+var uppgift5Knapp = document.getElementById("uppgift5button");
 //knappar
 
 
@@ -16,7 +17,7 @@ uppgift1Knapp.onclick = function() {
 
 
 // Uppgift 2
-uppgift2Knapp.onclick = function asd() {
+uppgift2Knapp.onclick = function() {
     function medeltal(in1, in2, in3, in4) {
         return ((in1 + in2 + in3 + in4) / 4);
     }
@@ -82,5 +83,14 @@ uppgift3Knapp.onclick = guessingGame;
 
 
 
-
 // Uppgift 4
+
+
+
+// Uppgift 5
+
+uppgift5Knapp.onclick = function(){
+    transformString((prompt("enter the text you want transformed!")));
+};
+
+// Uppgift 5
