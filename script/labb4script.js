@@ -1,3 +1,6 @@
+
+window.onload = function(){
+
 //button variables
 var uppgift1Knapp = document.getElementById("uppgift1button");
 var uppgift2Knapp = document.getElementById("uppgift2button");
@@ -7,6 +10,7 @@ var uppgift5Knapp = document.getElementById("uppgift5button");
 var uppgift6Knapp = document.getElementById("uppgift6button");
 var uppgift7Knapp = document.getElementById("uppgift7button");
 var uppgift8Knapp = document.getElementById("uppgift8button");
+var uppgift9Knapp = document.getElementById("uppgift9button");
 //button variables
 
 
@@ -116,3 +120,11 @@ uppgift8Knapp.onclick = function(){
     myBirthdDay();
 };
 // Uppgift 8
+
+
+// Uppgift 9
+uppgift9Knapp.onclick = function(){
+    generateTable([["Förnamn", "Efternamn", "Telefon" ], ["Haris", "Kljajic", "7716"], ["Mats", "Loock", "7714"],["hejsan,", "flera", "celler"], ["funkar", "bara", "bra!"]]);
+};
+// Uppgift 9
+};

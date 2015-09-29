@@ -1,3 +1,4 @@
+window.onload = function(){
 var xpos = 0;
 var ypos = 0;
 var testbutton = document.getElementById("testbutton");
@@ -233,3 +234,5 @@ function increasexpos(ObjectID, Value){
 
 
 */
+
+}
