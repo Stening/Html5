@@ -1,3 +1,6 @@
+
+
+
 function transformString(textToTransform) {
     var textArray = [];
     var outputText = "";

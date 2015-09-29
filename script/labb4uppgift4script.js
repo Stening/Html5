@@ -27,12 +27,14 @@ function menu() {
     }
 }
 
+
+
 uppgift4Knapp.onclick = menu;
 
 function celciusToFarenheit() {
     var celciusToConvert = prompt("enter the number of degrees you want to convert to Farenheit");
     if (((isNaN(celciusToConvert) === false) && (celciusToConvert !== ""))) {
-        var farenHeitResult = Math.floor(((celciusToConvert * 9) / 5) + 32);
+        var farenHeitResult = Math.round(((celciusToConvert * 9) / 5) + 32);
         alert(celciusToConvert + " °Celsius is " + farenHeitResult + " °Farenheit");
     }
     else {
@@ -43,7 +45,7 @@ function celciusToFarenheit() {
 function farenHeitToCelsius() {
     var farenHeitToConvert = prompt("enter the number of degrees you want to convert to Farenheit");
     if (((isNaN(farenHeitToConvert) === false) && (farenHeitToConvert !== ""))) {
-        var celciusResult = Math.floor(((farenHeitToConvert - 32) * 5) / 9);
+        var celciusResult = Math.round(((farenHeitToConvert - 32) * 5) / 9);
         alert(farenHeitToConvert + " °Farenheit is " + celciusResult + " °Celsius");
     }
     else {

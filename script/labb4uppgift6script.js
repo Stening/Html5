@@ -3,10 +3,10 @@
 
 function hypotenuse(){
     var calcDone = false;
+    while (calcDone === false){
     var aSide = prompt("Hypotenuse\nPlease enter the length of side A");
     var bSide = prompt("Hypotenuse\nPlease enter the length of side B");
-    while (calcDone === false){
-    if (((isNaN(aSide) === false) && (aSide !== "")) && ((bSide !== "" && (bSide !== "")))){
+    if (((isNaN(aSide) == false) && (aSide !== "")) && ((isNaN(bSide) == false) && (bSide !== ""))){
         var aNumber = parseInt(aSide, 10);
         var a2 = (Math.pow(aNumber, 2));
         var bNumber = parseInt(bSide, 10);
@@ -18,7 +18,6 @@ function hypotenuse(){
         }
         else{
             alert("Please enter a number");
-            calcDone = true;
         }
     }
 }
