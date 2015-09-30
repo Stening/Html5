@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../pics/icon128x128.png" type="image/png" />
+    <title>Formulär</title>
+    <link rel="stylesheet" type="text/css" href="../css/labb4validering.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="content">
+
+                <form method="post">
+                    <div id="inputinfo">
+                        <fieldset>
+                            <h1>Fyll i din betalningsplan</h1>
+                            <p>
+                                <label>Förnamn</label>
+                            </p>
+                            <input id="firstnameinputbox" autofocus type="text" name="errand" pattern=".{0,25}" required/>
+                            <p>
+                                <label>Efternamn</label>
+                            </p>
+                            <input id="lastnameinputbox" autofocus type="text" name="errand" pattern=".{0,25}" required/>
+                            <p>
+                                <label>postnummer</label>
+                            </p>
+                            <input id="postnumberinputbox" autofocus type="text" name="errand" required/><span id="postnumbernotice"></span>
+                            <p>
+                                <label>Prismodell</label>
+                            </p>
+                            <p>
+                                <select name="select">
+                                    <option value="low">Låg</option>
+                                    <option value="standard" selected>Standard</option>
+                                    <option value="high">Hög</option>
+                                </select>
+                            </p>
+                            <p>
+                            <label>E-post:</label>
+                            </p>
+                            <input autofocus type="email" name="errand" required/>
+
+                        </fieldset>
+                    </div>
+
+                    <script src="../script/labb4valideringscript.js"></script>
+                    <p>
+                        <input id="submitbutton" type="submit" value="Genomför köp" />
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -18,10 +18,7 @@ function generateTable() {
         else{
             matrix[cellCounter] += rowInput;
         }
-        
 */
-
-
 /*
 cell[0][0] = ”Förnamn:”;
 cell[0][1] = ”Efternamn:”;
@@ -35,8 +32,9 @@ cell[2][2] = ”7714”;
 */
 
 
-function generateTable(inputArray) {
 
+
+function generateTable(inputArray) {
     var table = document.getElementById("matrix");
     //console.log(table);
     var tableOutput = "<table border='1' cellpadding='3'>\n";
@@ -67,6 +65,8 @@ function generateTable(inputArray) {
     table.innerHTML = tableOutput;
     console.log(tableOutput);
 }
+
+
 
 
 

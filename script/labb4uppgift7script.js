@@ -5,7 +5,7 @@ function tentamen(inputArray) {
     }
     var highestNum = Math.max.apply(undefined, inputArray);
     var lowestNum = Math.min.apply(undefined, inputArray);
-    var medelTal = (valueSum / inputArray.length);
+    var medelTal = Math.floor((valueSum / inputArray.length));
     var outputArray = [medelTal, highestNum, lowestNum];
     console.log("Medeltalet är: " + medelTal);
     console.log("Det högsta talet är: " + highestNum);
