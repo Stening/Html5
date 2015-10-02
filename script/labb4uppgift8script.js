@@ -9,7 +9,7 @@ function myBirthdDay() {
             var monthNumber = parseInt(month, 10);
             var dayNumber = parseInt(day, 10);
             var monthRounded = (Math.round(monthNumber) - 1);
-            var dayRounded = (Math.round(dayNumber) + 1);
+            var dayRounded = (Math.round(dayNumber));
             //console.log("month " + monthRounded);
             //console.log("day " + dayRounded);
             var thisYear = new Date().getFullYear();

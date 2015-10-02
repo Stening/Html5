@@ -36,10 +36,8 @@ cell[2][2] = ”7714”;
 
 function generateTable(inputArray) {
     var table = document.getElementById("matrix");
-    //console.log(table);
     var tableOutput = "<table border='1' cellpadding='3'>\n";
     var numberOfRows = inputArray.length;
-    //console.log(inputArray.length);
     for (var i = 0; i < numberOfRows; i++) {
         if(i % 2 === 0){
         tableOutput += "<tr>\n";
@@ -48,21 +46,18 @@ function generateTable(inputArray) {
             tableOutput += "<tr BGcolor=#A6B2BE>\n";
         }
         var currentCell = inputArray[i];
-        //console.log(tableOutput);
-        //console.log(inputArray[i]);
         for (var j = 0; j < currentCell.length; j++) {
-            //console.log(inputArray[j]);
-            //table.textContent += (inputArray[j]);
-            //tableOutput += "</tr>";
+            if(i === 0){
+                tableOutput +=  ("<th>" + currentCell[j] + "</th>\n");
+            }
+            else{
             tableOutput +=  ("<td>" + currentCell[j] + "</td>\n");
-            //console.log(currentCell[j]);
+            }
         }
-        //tableOutput +=  inputArray[j];
         tableOutput += "</tr>\n";
     }
-    //console.log(tableOutput);
     tableOutput += "</table>";
-    table.innerHTML = tableOutput;
+    table.insertAdjacentHTML("afterend", tableOutput);
     console.log(tableOutput);
 }
 

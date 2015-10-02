@@ -17,7 +17,6 @@
     <div id="container">
         <div id="header">
             <div id="content">
-
                 <form method="post">
                     <div id="inputinfo">
                         <fieldset>
@@ -25,15 +24,15 @@
                             <p>
                                 <label>Förnamn</label>
                             </p>
-                            <input id="firstnameinputbox" autofocus type="text" name="errand" pattern=".{0,25}" required/>
+                            <input id="firstnameinputbox"  type="text" name="errand"/><span id="firstnamenotice"></span>
                             <p>
                                 <label>Efternamn</label>
                             </p>
-                            <input id="lastnameinputbox" autofocus type="text" name="errand" pattern=".{0,25}" required/>
+                            <input id="lastnameinputbox"  type="text" name="errand" /><span id="lastnamenotice"></span>
                             <p>
                                 <label>postnummer</label>
                             </p>
-                            <input id="postnumberinputbox" autofocus type="text" name="errand" required/><span id="postnumbernotice"></span>
+                            <input id="postnumberinputbox"  type="text" name="errand" /><span id="postnumbernotice"></span>
                             <p>
                                 <label>Prismodell</label>
                             </p>
@@ -47,14 +46,13 @@
                             <p>
                             <label>E-post:</label>
                             </p>
-                            <input autofocus type="email" name="errand" required/>
-
+                            <input type="text" id="emailinputbox" name="errand"/><span id="emailnotice"></span>
                         </fieldset>
                     </div>
 
                     <script src="../script/labb4valideringscript.js"></script>
                     <p>
-                        <input id="submitbutton" type="submit" value="Genomför köp" />
+                        <input id="submitbutton" type="submit" value="Genomför köp"/>
                     </p>
                 </form>
             </div>

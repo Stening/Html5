@@ -72,3 +72,18 @@ a{
   padding-bottom:5px;
 }
 
+.fa-exclamation-triangle{
+	color:red;
+	position:absolute;
+}
+.fa-check{
+	color:green;
+	position:absolute;
+}
+
+
+
+#postNumberInputBox{
+	
+	
+}
