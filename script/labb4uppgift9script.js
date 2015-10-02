@@ -1,5 +1,7 @@
 /*
-//en ofärdig loop med input av användaren
+//this is incomplete
+
+
 //alert("the page is loaded!");
 function generateTable() {
     var cellCounter = 1;
@@ -19,21 +21,15 @@ function generateTable() {
             matrix[cellCounter] += rowInput;
         }
 */
-/*
-cell[0][0] = ”Förnamn:”;
-cell[0][1] = ”Efternamn:”;
-cell[0][2] = ”Telefon:”;
-cell[1][0] = ”Haris”;
-cell[1][1] = ”Kljajic”;
-cell[1][2] = ”7716”;
-cell[2][0] = ”Mats”;
-cell[2][1] = ”Loock”;
-cell[2][2] = ”7714”;
-*/
 
 
 
 
+
+//here, with 2 for loops i can do things for every row and every cell
+//when the first for loop runs i collect the required html code and put it in tableOutput, the second goes through the 2nd dimension array and adds cell-specific code like <td> tags and the text, 
+//also adds into tableOutput.
+//at the end i add the last table tag and finally print out the whole variable in the html code and the console
 function generateTable(inputArray) {
     var table = document.getElementById("matrix");
     var tableOutput = "<table border='1' cellpadding='3'>\n";
@@ -65,58 +61,4 @@ function generateTable(inputArray) {
 
 
 
-/*
-var sout;
-sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
-for (var i = 1; i <= 10; i++) {
-sout = sout + "<tr>";
-for (var j = 1; j <= 10; j++) {
-sout = sout + "<td>" + i * j + "</td>";
-}
-sout = sout + "</tr>";
-}
-sout = sout + "</table>";
-document.write (sout);
 
-
-
-}
-
-*/
-
-
-
-
-
-/*
-    
-    console.log(header);
-    console.log(row1);
-    console.log(row2);
-    //table.open();
-    document.write(
-        "<table>\n" +
-            "<thead>\n" +
-                "<tr>\n" +
-                    "<th colspan=3>" + header[0] + "</th>" + "<th>" + header[1] + "</th>" + "<th>" + header[2] + "</th>" +
-                "</tr>\n" +
-            "</thead>\n" +
-                "<tbody>" +
-                    "<tr BGcolor=#D1DBBD>" +
-                        "<td colspan=3>" + row1[0] + "</td>\n" +
-                        "<td>" + row1[1] + "</td>\n" +
-                        "<td>" + row1[2] + "</td>\n" +
-                    "</tr>\n" +
-                    "<tr>\n" +
-                        "<td colspan=3>" + row2[0] + "</td>\n" +
-                        "<td>" + row2[1] + "</td>\n" +
-                        "<td>" + row2[2] + "</td>\n" +
-                    "</tr>\n" +
-            "</tbody>\n" +
-        "</table>");
-         //table.close();
-
-//document.onload = function(){
-}
-
-*/

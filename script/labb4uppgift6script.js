@@ -1,6 +1,7 @@
 
 
-
+//first i prompt 2 user inputs and check if they are both numbers and that they are not empty, then i apply the mathmatical calculations required
+//then i put the result in an alert
 function hypotenuse(){
     var calcDone = false;
     while (calcDone === false){

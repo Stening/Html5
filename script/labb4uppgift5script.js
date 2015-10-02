@@ -1,6 +1,7 @@
 
 
-
+//the for loop goes through every character of the user input, then converts it to upper/lower case or makes it # if required
+//i continue to add the new characters into the variable "outputText" then log it in the console
 function transformString(textToTransform) {
     var textArray = [];
     var outputText = "";
@@ -18,12 +19,9 @@ function transformString(textToTransform) {
         }
         else {
             alert("Please enter a text of some sort!");
-            //console.log(textArray);
-            //textArray[x] = textToTransform[x];
         }
     }
     if (outputText !== "") {
-        //outputText = ((outputText) += (textArray[x]));
         console.log(outputText);
     }
     else {
@@ -31,25 +29,3 @@ function transformString(textToTransform) {
     }
 }
 
-
-
-
-
-
-
-//console.log(textToTransform[x]);
-/*
-        }
-        else if ((textToTransform[x]) == (textToTransform.toUpperCase)){
-            textToTransform[x].toLocaleLowerCase();
-            //console.log(textToTransform[x]);
-        }
-        else if ((textToTransform[x]) == (textToTransform.toLowerCase)){
-            textToTransform[x].toLocaleUpperCase();
-            //console.log(textToTransform[x]);
-        }
-        else{
-            console.log(textToTransform[x]);
-        }
-    }
-}*/

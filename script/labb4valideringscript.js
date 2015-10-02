@@ -22,6 +22,8 @@ window.onload = function() {
     var cancelButton = document.getElementById("cancelbutton");
     var BlockerWindow = document.getElementById("blocker");
     var form = document.getElementById("form");
+//collection of variables, mostly id's of html tags
+//i also use the regexp (regular expression) to easily compare the input string to my custom required pattern
 
 
 
@@ -32,8 +34,7 @@ window.onload = function() {
 
 
 
-
-
+//when the input box for postnumber goes out of focus, i use .match to apply my regesp and check if it matches my pattern.
     postNumberInputBox.onblur = function() {
         if (postNumberInputBox.value.match(postNumberFormat)) {
             console.log("sucess!");
@@ -45,6 +46,7 @@ window.onload = function() {
                 postNumberNotice.insertAdjacentHTML("afterbegin", "<i id='postnumbercheck' class='fa fa-check'></i>");
             }
             postNumber = "";
+            //after that, i remove all the non-numbers that are exluded from my pattern and save it in a variable
             for (var i = 0; i < postNumberInputBox.value.length; i++) {
                 switch (postNumberInputBox.value[i]) {
                     case " ":
@@ -66,7 +68,6 @@ window.onload = function() {
             if ((document.getElementById("postnumbercheck")) || (document.getElementById("postnumbertriangle"))) {
                 postNumberNotice.removeChild(postNumberNotice.firstChild);
                 postNumberNotice.insertAdjacentHTML("afterbegin", "<i id='postnumbertriangle' class='fa fa-exclamation-triangle'></i>");
-                //1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
             }
             else {
                 postNumberNotice.insertAdjacentHTML("afterbegin", "<i id='postnumbertriangle' class='fa fa-exclamation-triangle'></i>");
@@ -78,7 +79,8 @@ window.onload = function() {
 
 
 
-
+//i check the name so that it contains only letters using .match, then convert the first letter to uppercase.
+//for the checkmarks and triangles, i simply check if they or their counterpart already exist, if so i remove it and add the one that matches if the input is correct
     firstNameInputBox.onblur = function() {
         if (firstNameInputBox.value.match(nameCheck) && (firstNameInputBox.value.length < 20)) {
             var firstLetter = (firstNameInputBox.value[0].toUpperCase());
@@ -118,7 +120,8 @@ window.onload = function() {
 
 
 
-
+//i check the last name so that it contains only letters using .match, then convert the first letter to uppercase.
+//for the checkmarks and triangles, i simply check if they or their counterpart already exist, if so i remove it and add the one that matches if the input is correct
     lastNameInputBox.onblur = function() {
         if (lastNameInputBox.value.match(nameCheck) && (lastNameInputBox.value.length < 20)) {
             var firstLetter = (lastNameInputBox.value[0].toUpperCase());
@@ -150,8 +153,8 @@ window.onload = function() {
 
 
 
-
-
+//on the email i simply use the .match again to check that it has atleast a @ and a dot somwhere after so that it resembles an email-adress
+//for the checkmarks and triangles, i simply check if they or their counterpart already exist, if so i remove it and add the one that matches if the input is correct
     emailInputBox.onblur = function() {
         if (emailInputBox.value.match(emailCheck) && (emailInputBox.value.length < 35)) {
             if ((document.getElementById("emailcheck")) || (document.getElementById("emailtriangle"))) {
@@ -178,7 +181,7 @@ window.onload = function() {
         console.log(emailInputBox.value.length);
     };
 
-
+//this function continuously checks if there are checkmarks after every input box, then enable the "genomför köp" button
     setInterval(function() {
         if ((document.getElementById("emailcheck")) && (document.getElementById("postnumbercheck")) && (document.getElementById("lastnamecheck")) && (document.getElementById("firstnamecheck") && (awaitingConfirm === false))) {
             submitButton.disabled = false;
@@ -191,7 +194,8 @@ window.onload = function() {
     
     
     
-    
+    // here i collect from all the inputboxes or related variables and display it in the popup box
+    //i also add a huge "cover" over all the inputboxes to disable the user from clicking anything other than the popup menu
     submitButton.onclick = function() {
         popupBox.style.display = "block";
         document.getElementById("confirmfirstname").textContent = firstNameValidated;
@@ -205,13 +209,13 @@ window.onload = function() {
     };
     
     
-    
-    
+    //simply submits the form when i click the "färdigställ köp" button
     confirmButton.onclick = function(){
         form.submit();
     };
     
     
+    //when clicked, hides the popupmenu and the "cover" for some reason i needed to set the opacity on the "cover" i did not have the time to figure out why
     cancelButton.onclick = function(){
         popupBox.style.display = "none";
         BlockerWindow.style.display = "none";

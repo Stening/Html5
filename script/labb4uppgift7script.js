@@ -1,7 +1,12 @@
+
+
+
+//i go through every value in the incoming array, add the values together, and use Math.max and Math.min to collect the maximum and minimum values
+//then i declare a new array containing the three values, and then i console log all the values and the created array
 function tentamen(inputArray) {
      var valueSum = 0;
-    for(var x = 0; x < inputArray.length; x++){
-        valueSum += (inputArray[x]);
+    for(var i = 0; i < inputArray.length; i++){
+        valueSum += (inputArray[i]);
     }
     var highestNum = Math.max.apply(undefined, inputArray);
     var lowestNum = Math.min.apply(undefined, inputArray);

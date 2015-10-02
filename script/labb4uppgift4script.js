@@ -1,7 +1,7 @@
 var uppgift4Knapp = document.getElementById("uppgift4button");
 
 
-
+//the menu checks for string inputs from 0 to 3 and calls the proper functions
 function menu() {
     var menuloop = false;
     while (menuloop === false) {
@@ -26,11 +26,11 @@ function menu() {
         }
     }
 }
-
-
-
 uppgift4Knapp.onclick = menu;
 
+
+
+//i check if the user input is a number then apply the mathmatical calculations to convert celcius to farenheit
 function celciusToFarenheit() {
     var celciusToConvert = prompt("enter the number of degrees you want to convert to Farenheit");
     if (((isNaN(celciusToConvert) === false) && (celciusToConvert !== ""))) {
@@ -42,6 +42,8 @@ function celciusToFarenheit() {
     }
 }
 
+
+//i check if the user input is a number then apply the mathmatical calculations to convert farenheit to celcius
 function farenHeitToCelsius() {
     var farenHeitToConvert = prompt("enter the number of degrees you want to convert to Farenheit");
     if (((isNaN(farenHeitToConvert) === false) && (farenHeitToConvert !== ""))) {
