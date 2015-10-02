@@ -20,6 +20,19 @@ window.onload = function() {
     var awaitingConfirm = false;
     var confirmButton = document.getElementById("confirmbutton");
     var cancelButton = document.getElementById("cancelbutton");
+    var BlockerWindow = document.getElementById("blocker");
+    var form = document.getElementById("form");
+
+
+
+
+
+
+
+
+
+
+
 
     postNumberInputBox.onblur = function() {
         if (postNumberInputBox.value.match(postNumberFormat)) {
@@ -166,11 +179,6 @@ window.onload = function() {
     };
 
 
-
-
-
-
-
     setInterval(function() {
         if ((document.getElementById("emailcheck")) && (document.getElementById("postnumbercheck")) && (document.getElementById("lastnamecheck")) && (document.getElementById("firstnamecheck") && (awaitingConfirm === false))) {
             submitButton.disabled = false;
@@ -179,94 +187,38 @@ window.onload = function() {
             submitButton.disabled = true;
         }
     }, 10);
-
-
-
+    
+    
+    
+    
+    
     submitButton.onclick = function() {
-        priceModel.disabled = true;
-        emailInputBox.disabled = true;
-        awaitingConfirm = true;
-        firstNameInputBox.disabled = true;
-        lastNameInputBox.disabled = true;
-        postNumberInputBox.disabled = true;
         popupBox.style.display = "block";
-        inputInfoBox.style.opacity = "0.5";
-        submitButton.disabled = true;
+        document.getElementById("confirmfirstname").textContent = firstNameValidated;
+        document.getElementById("confirmlastname").textContent = lastNameValidated;
+        document.getElementById("confirmpostnumber").textContent = postNumber;
+        document.getElementById("confirmpricemodel").textContent = document.getElementById("pricemodel").value;
+        document.getElementById("confirmemail").textContent = emailInputBox.value;
+        BlockerWindow.style.display = "block";
+        BlockerWindow.style.opacity = "0.5";
+        
     };
-    function sitereset(){
-        priceModel.disabled = false;
-        emailInputBox.disabled = false;
-        awaitingConfirm = false;
-        firstNameInputBox.disabled = false;
-        lastNameInputBox.disabled = false;
-        postNumberInputBox.disabled = false;
-        popupBox.style.display = "none";
-        inputInfoBox.style.opacity = "1";
-        submitButton.disabled = false;
-    }
+    
+    
+    
     
     confirmButton.onclick = function(){
-        sitereset();
-    };
-    cancelButton.onclick = function(){
-        sitereset();
+        form.submit();
     };
     
+    
+    cancelButton.onclick = function(){
+        popupBox.style.display = "none";
+        BlockerWindow.style.display = "none";
+        BlockerWindow.style.opacity = "1";
+    };
 };
 
 
 
 
-/*var postNummerInputValidated = "";
-        var postNummerInputsortedOneToThree = "";
-        for (var i = 0; i < 3; i++) {
-            switch (postNumberInputBox.value[i]) {
-                case "e":
-                case "E":
-                case "S":
-                case "s":
-                case " ":
-                case "-":
-                    postNummerInputsortedOneToThree += "";
-                    break;
-                default:
-                    postNummerInputsortedOneToThree += postNumberInputBox.value[i];
-                    //console.log(postNumberInputBox[i]);
-                    //console.log(postNummerInputsorted);
-            }
-        }
-        var postNummerInputsortedRest = "";
-            for (var i = 3; i < postNumberInputBox.value.length; i++) {
-                    postNummerInputsortedRest += postNumberInputBox.value[i];
-            }
-            postNummerInputsortedTotal = (postNummerInputsortedOneToThree += postNummerInputsortedRest);
-            console.log(postNummerInputsortedTotal);
-            //postNummerInputValidated = parseInt(postNummerInputsortedTotal, 10);
-            //console.log(isNaN(postNummerInputValidated));
-            //console.log(postNummerInputValidated.toString().length);
-        if (((postNummerInputsortedTotal.length) < 6) && ((postNummerInputsortedTotal.length) > 0)) {
-            //console.log(isNaN(postNummerInputValidated));
-            console.log(postNummerInputsortedTotal.length);
-            if ((document.getElementById("triangle") && (!document.getElementById("check")))) {
-                //postNumberNotice.removeChild(postNumberNotice.firstChild);
-                postNumberNotice.removeChild(postNumberNotice.firstChild);
-                postNumberNotice.insertAdjacentHTML("afterbegin", "<i id='check' class='fa fa-check'></i>");
-            }
-        }
-            else if ((document.getElementById("check")) && (!document.getElementById("triangle"))) {
-                postNumberNotice.removeChild(postNumberNotice.firstChild);
-                postNumberNotice.insertAdjacentHTML("afterbegin", "<i id='triangle'class='fa fa-exclamation-triangle'></i>");
-                //1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
-            }
-            else if ((!document.getElementById("triangle"))) {
-                postNumberNotice.insertAdjacentHTML("afterbegin", "<i id='triangle'class='fa fa-exclamation-triangle'></i>");
-        }
-     else {
-            //console.log(postNummerInputValidated);
-            //console.log(isNaN(postNummerInputValidated));
-            //console.log(postNummerInputValidated.toString().length);
-            console.log("please enter the correct format!");
-            //postNumberNotice.insertAdjacentHTML("afterend", "<i id='triangle' class='fa fa-exclamation-triangle'></i>");
-            //postNumberNotice.removeChild(postNumberNotice.firstChild);
-        }
-    };*/

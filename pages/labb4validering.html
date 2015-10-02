@@ -12,12 +12,13 @@
 
 </head>
 
-
 <body>
     <div id="container">
+        <div id="blocker">
+        </div>
         <div id="header">
             <div id="content">
-                <form method="post">
+                <form id="form" method="post">
                     <div id="inputinfo">
                         <fieldset>
                             <h1>Fyll i din betalningsplan</h1>
@@ -49,16 +50,29 @@
                             <input type="text" id="emailinputbox" name="emailinput" /><span id="emailnotice"></span>
                         </fieldset>
                     </div>
+                    </form>
                     <div id="popupbox">
-                        <p id="confirmfirstname"></p>
-                        <p id="confirmlastname"></p>
-                        <p id="confirmpostnumbername"></p>
-                        <p id="confirmpricemodel"></p>
-                        <p id="confirmemail"></p>
+                        <p>
+                            <span>Förnamn:</span><span id="confirmfirstname"></span>
+                        </p>
+                        <p>
+                            <span>Efternamn:</span><span id="confirmlastname"></span>
+                        </p>
+                        <p>
+                            <span>Postnummer:</span><span id="confirmpostnumber"></span>
+                        </p>
+                        <p>
+                            <span>Prismodell:</span><span id="confirmpricemodel"></span>
+                        </p>
+                        <p>
+                            <span>E-post:</span>
+                            <span id="confirmemail"></span>
+                        </p>
                         <input id="confirmbutton" type="submit" name="confirm" value="Fastsäll köp" />
-                        <button id="cancelbutton"  name="cancel">Avbryt köp</button>
+                        <p>
+                            <button id="cancelbutton" name="cancel">Avbryt köp</button>
+                        </p>
                     </div>
-                </form>
                 <p>
                     <button id="submitbutton">Genomför köp</button>
                 </p>
