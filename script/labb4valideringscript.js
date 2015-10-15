@@ -79,12 +79,19 @@ window.onload = function() {
 
 
 
+
+
 //i check the name so that it contains only letters using .match, then convert the first letter to uppercase.
 //for the checkmarks and triangles, i simply check if they or their counterpart already exist, if so i remove it and add the one that matches if the input is correct
     firstNameInputBox.onblur = function() {
         if (firstNameInputBox.value.match(nameCheck) && (firstNameInputBox.value.length < 20)) {
+            /*here starts the edit for the error i found*/
             var firstLetter = (firstNameInputBox.value[0].toUpperCase());
-            firstNameValidated = (firstLetter += firstNameInputBox.value);
+            firstNameValidated = firstLetter;
+            for (var i=1; i<firstNameInputBox.value.length; i++){
+                firstNameValidated += firstNameInputBox.value[i];
+            }
+            /*here ends the edit for the error i found*/
             console.log(firstNameValidated);
             if ((document.getElementById("firstnamecheck")) || (document.getElementById("firstnametriangle"))) {
                 firstNameNotice.removeChild(firstNameNotice.firstChild);
@@ -113,20 +120,18 @@ window.onload = function() {
 
 
 
-
-
-
-
-
-
-
 //i check the last name so that it contains only letters using .match, then convert the first letter to uppercase.
 //for the checkmarks and triangles, i simply check if they or their counterpart already exist, if so i remove it and add the one that matches if the input is correct
     lastNameInputBox.onblur = function() {
         if (lastNameInputBox.value.match(nameCheck) && (lastNameInputBox.value.length < 20)) {
+            
             var firstLetter = (lastNameInputBox.value[0].toUpperCase());
-            lastNameValidated = (firstLetter += lastNameInputBox.value);
-            lastNameValidated[0] = firstLetter;
+            /*here starts the edit for the error i found*/
+            lastNameValidated = firstLetter;
+            for (var i=1; i<lastNameInputBox.value.length; i++){
+                lastNameValidated += lastNameInputBox.value[i];
+            }
+             /*here ends the edit for the error i found*/
             console.log(lastNameValidated);
             if ((document.getElementById("lastnamecheck")) || (document.getElementById("lastnametriangle"))) {
                 lastNameNotice.removeChild(lastNameNotice.firstChild);
