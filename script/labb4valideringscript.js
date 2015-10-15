@@ -61,7 +61,7 @@ window.onload = function() {
                         postNumber += postNumberInputBox.value[i];
                 }
             }
-            console.log(postNumber)
+            console.log(postNumber);
             postNumberInputBox.style.backgroundColor = ("#75E376");
         }
         else {
@@ -158,6 +158,9 @@ window.onload = function() {
 
 
 
+
+
+
 //on the email i simply use the .match again to check that it has atleast a @ and a dot somwhere after so that it resembles an email-adress
 //for the checkmarks and triangles, i simply check if they or their counterpart already exist, if so i remove it and add the one that matches if the input is correct
     emailInputBox.onblur = function() {
@@ -195,6 +198,13 @@ window.onload = function() {
             submitButton.disabled = true;
         }
     }, 10);
+    
+    
+    
+    
+    
+    
+    
     
     
     
